@@ -82,8 +82,8 @@ export const TOUR_PRIVATE_DETAIL_2 = '/gallery/proposal-portrait.png'
 export const TOUR_PRIVATE_DETAIL_3 = u('photo-1472213984618-c79aaec7fef0', 800, 600)
 // REPLACE: Corporate team on private boat, professional but relaxed, lake in background
 
-export const TOUR_PRIVATE_CARD = '/gallery/proposal-landscape.png'
-// Proposal landscape — romantic, aspirational, golden hour
+export const TOUR_PRIVATE_CARD = '/gallery/grandparents-toast-sunset.webp'
+// Two older couples toasting under string lights at sunset — warm, multigenerational private charter moment
 
 // ────────────────────────────────────────────────────────────────────────────
 // COFFEE CRUISE — Morning on the Lake
@@ -101,8 +101,8 @@ export const TOUR_COFFEE_DETAIL_2 = u('photo-1506905925346-21bda4d32df4', 800, 6
 export const TOUR_COFFEE_DETAIL_3 = u('photo-1488188840666-e2308741a62f', 800, 600)
 // REPLACE: Small intimate group of 4-6 people, morning glow, relaxed smiles, thermos/coffee
 
-export const TOUR_COFFEE_CARD = u('photo-1470071459604-3b5ec3a7fe05', 800, 600)
-// REPLACE: Mist-on-the-lake morning shot — quiet, contemplative, perfect morning vibes
+export const TOUR_COFFEE_CARD = '/gallery/coffee-cruise-morning.png'
+// Drift Upstate boat full of guests, bright blue sky, sun low over Adirondack peaks — morning light
 
 // ────────────────────────────────────────────────────────────────────────────
 // LADIES NIGHT / BACHELORETTE
@@ -309,8 +309,8 @@ export const VIDEO_BEHIND_SCENES_ID = 'dQw4w9WgXcQ'
 // BEFORE / AFTER SLIDER
 // ────────────────────────────────────────────────────────────────────────────
 
-export const LAKE_MORNING = '/gallery/lake-morning-cruise.webp'
+export const LAKE_MORNING = '/gallery/lake-morning-cruise.png'
 // Drift Upstate boat full of guests, bright blue sky, sun low over Adirondack peaks
 
-export const LAKE_SUNSET = '/gallery/lake-sunset-charter.webp'
+export const LAKE_SUNSET = '/gallery/lake-sunset-charter.png'
 // Drift Upstate boat full of guests, fiery orange/gold sunset sky over the lake
