@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
+import MagneticButton from '@/components/ui/MagneticButton'
+import { HOME_FINALCTA_SUNSET } from '@/lib/media'
 
 export function FinalCTA() {
   return (
@@ -12,7 +14,7 @@ export function FinalCTA() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1472213984618-c79aaec7fef0?auto=format&fit=crop&w=1920&q=85"
+          src={HOME_FINALCTA_SUNSET}
           alt="Stunning sunset over the Adirondack mountains and Fourth Lake"
           fill
           className="object-cover object-center"
@@ -47,12 +49,16 @@ export function FinalCTA() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-            <Button asChild size="xl" variant="primary">
-              <Link href="/book">Book Now →</Link>
-            </Button>
-            <Button asChild size="xl" variant="outline">
-              <Link href="/tours">View All Tours</Link>
-            </Button>
+            <MagneticButton strength={0.35} radius={100}>
+              <Button asChild size="xl" variant="primary" className="hover-gold-glow">
+                <Link href="/book">Book Now →</Link>
+              </Button>
+            </MagneticButton>
+            <MagneticButton strength={0.25} radius={80}>
+              <Button asChild size="xl" variant="outline">
+                <Link href="/tours">View All Tours</Link>
+              </Button>
+            </MagneticButton>
           </div>
 
           {/* Micro trust */}

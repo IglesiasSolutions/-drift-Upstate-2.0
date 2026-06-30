@@ -9,6 +9,9 @@ const quickLinks = [
   { href: '/tours/private', label: 'Private Charter' },
   { href: '/tours/coffee-cruise', label: 'Coffee Cruise' },
   { href: '/tours/ladies-night', label: 'Ladies Night' },
+  { href: '/tours/corporate', label: 'Corporate Events' },
+  { href: '/tours/wedding', label: 'Wedding Charter' },
+  { href: '/tours/family', label: 'Family Cruise' },
   { href: '/about', label: 'About Us' },
   { href: '/crew', label: 'Meet the Crew' },
   { href: '/faq', label: 'FAQ' },
@@ -149,7 +152,7 @@ export function Footer() {
             {[
               { href: '/privacy', label: 'Privacy Policy' },
               { href: '/terms', label: 'Terms' },
-              { href: '/sitemap', label: 'Sitemap' },
+              { href: '/sitemap.xml', label: 'Sitemap' },
             ].map((link) => (
               <Link
                 key={link.href}

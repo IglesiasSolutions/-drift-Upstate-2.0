@@ -23,7 +23,7 @@ export function AudienceGrid() {
         <SectionHeader
           eyebrow="For Every Kind of Traveler"
           title="Made for Every Kind of Adventure."
-          subtitle="Whether you&rsquo;re celebrating, exploring, or just looking for a perfect morning — there&rsquo;s a tour with your name on it."
+          subtitle="Whether you're celebrating, exploring, or just looking for a perfect morning — there's a tour with your name on it."
         />
 
         <Stagger

@@ -225,7 +225,7 @@ export function Navigation() {
           >
             <Link href="/book">
               <div className="bg-drift-gold text-drift-navy h-14 flex items-center justify-center gap-2 font-montserrat font-bold tracking-widest uppercase text-sm shadow-lift-lg">
-                📅 Book Now — Reserve Your Spot
+                Book Now — Reserve Your Spot →
               </div>
             </Link>
           </motion.div>

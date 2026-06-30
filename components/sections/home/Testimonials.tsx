@@ -87,7 +87,7 @@ export function Testimonials() {
       <div className="max-w-4xl mx-auto px-6">
         <SectionHeader
           eyebrow="What People Are Saying"
-          title="Don&rsquo;t take our word for it."
+          title="Don't take our word for it."
         />
 
         {/* Carousel */}

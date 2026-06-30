@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
+import { HOME_INTRO_LIFESTYLE } from '@/lib/media'
 
 export function ExperienceIntro() {
   return (
@@ -69,7 +70,7 @@ export function ExperienceIntro() {
               {/* Main image */}
               <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-lift-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=900&q=80"
+                  src={HOME_INTRO_LIFESTYLE}
                   alt="Guests enjoying the cycle boat tour on Fourth Lake — Adirondacks, NY"
                   fill
                   className="object-cover object-center transition-transform duration-700 hover:scale-105"

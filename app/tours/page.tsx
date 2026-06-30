@@ -12,25 +12,25 @@ import { TOURS_HERO } from '@/lib/media'
 export const metadata: Metadata = {
   title: 'Our Tours — Cycle Boat Experiences · Drift Upstate',
   description:
-    'Explore all Drift Upstate cycle boat experiences on Fourth Lake. Public tours, private charters, morning coffee cruises, and ladies night packages. Eagle Bay, Adirondacks.',
+    'Explore all Drift Upstate cycle boat experiences on Fourth Lake. Public tours, private charters, morning coffee cruises, ladies night, corporate events, weddings, and family cruises. Eagle Bay, Adirondacks.',
   openGraph: {
     title: 'Our Tours — Drift Upstate Cycle Boat · Eagle Bay, NY',
     description:
-      'Four unforgettable ways to experience Fourth Lake. Public tours, private charters, coffee cruises & ladies night. Book your Adirondack adventure today.',
+      'Seven unforgettable ways to experience Fourth Lake. Public tours, private charters, coffee cruises, ladies night, corporate events, weddings & family cruises. Book today.',
     images: [{ url: TOURS_HERO, width: 1920, height: 900 }],
   },
 }
 
 // Comparison table data
 const comparisonRows = [
-  { label: 'Duration',        public: '90 min',     private: '90–120 min',  coffee: '60 min',     ladies: '90 min' },
-  { label: 'Capacity',        public: 'Up to 14',   private: 'Full boat',   coffee: 'Max 8',      ladies: 'Up to 14' },
-  { label: 'Starting Price',  public: '$35/person',  private: 'Custom',      coffee: '$30/person',  ladies: '$45/person' },
-  { label: 'Private Booking', public: '—',           private: '✓',           coffee: '—',           ladies: 'Optional' },
-  { label: 'BYOB',            public: '✓',           private: '✓',           coffee: '✓',           ladies: '✓' },
-  { label: 'Sunset Option',   public: '✓',           private: '✓',           coffee: '—',           ladies: '✓' },
-  { label: 'Custom Playlist', public: '—',           private: '✓',           coffee: '—',           ladies: '✓' },
-  { label: 'Decorations',     public: '—',           private: 'Add-on',      coffee: '—',           ladies: 'Add-on' },
+  { label: 'Duration',        public: '90 min',      private: '90–120 min',  coffee: '60 min',      ladies: '90 min',     corporate: '90–120 min', wedding: '90–120 min', family: '90 min' },
+  { label: 'Capacity',        public: 'Up to 14',    private: 'Full boat',   coffee: 'Max 8',       ladies: 'Up to 14',   corporate: 'Full boat',  wedding: 'Full boat',  family: 'Up to 14' },
+  { label: 'Starting Price',  public: '$35/person',   private: 'Custom',      coffee: '$30/person',   ladies: '$45/person', corporate: 'Custom',     wedding: 'Custom',     family: '$35/person' },
+  { label: 'Private Booking', public: '—',            private: '✓',           coffee: '—',            ladies: 'Optional',   corporate: '✓',          wedding: '✓',          family: '—' },
+  { label: 'BYOB',            public: '✓',            private: '✓',           coffee: '✓',            ladies: '✓',          corporate: '✓',          wedding: '✓',          family: '✓' },
+  { label: 'Sunset Option',   public: '✓',            private: '✓',           coffee: '—',            ladies: '✓',          corporate: '✓',          wedding: '✓',          family: '✓' },
+  { label: 'Custom Playlist', public: '—',            private: '✓',           coffee: '—',            ladies: '✓',          corporate: '✓',          wedding: '✓',          family: '—' },
+  { label: 'Decorations',     public: '—',            private: 'Add-on',      coffee: '—',            ladies: 'Add-on',     corporate: 'Add-on',     wedding: 'Add-on',     family: '—' },
 ]
 
 export default function ToursPage() {
@@ -39,7 +39,7 @@ export default function ToursPage() {
       <PageHero
         eyebrow="Every Tour · Fourth Lake"
         title="Unforgettable Ways to Experience the Water"
-        subtitle="Four different experiences. One lake. Zero excuses to stay on shore."
+        subtitle="Seven unique experiences. One lake. Zero excuses to stay on shore."
         image={TOURS_HERO}
         imageAlt="Drift Upstate cycle boat on Fourth Lake with Adirondack mountains"
         height="md"

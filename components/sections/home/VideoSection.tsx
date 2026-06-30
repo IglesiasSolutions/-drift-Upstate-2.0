@@ -6,8 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Play, X } from 'lucide-react'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
 
-/* Replace YOUTUBE_VIDEO_ID with the real highlight reel video ID */
-const YOUTUBE_VIDEO_ID = 'dQw4w9WgXcQ'
+import { VIDEO_THUMBNAIL, VIDEO_HIGHLIGHT_REEL_ID } from '@/lib/media'
 
 export function VideoSection() {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -56,7 +55,7 @@ export function VideoSection() {
           >
             {/* Thumbnail image */}
             <Image
-              src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1280&q=80"
+              src={VIDEO_THUMBNAIL}
               alt="Drone aerial view of Fourth Lake with the Drift Upstate cycle boat — click to play video"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -112,7 +111,7 @@ export function VideoSection() {
               onClick={(e) => e.stopPropagation()}
             >
               <iframe
-                src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&rel=0&modestbranding=1`}
+                src={`https://www.youtube.com/embed/${VIDEO_HIGHLIGHT_REEL_ID}?autoplay=1&rel=0&modestbranding=1`}
                 title="Drift Upstate — Adirondack Cycle Boat Tour Highlight Reel"
                 allow="autoplay; fullscreen"
                 allowFullScreen
