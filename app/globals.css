@@ -5,12 +5,12 @@
 /* ─── Design Tokens ─────────────────────────────────────────── */
 @layer base {
   :root {
-    --drift-navy:      #1B3A0B;
-    --drift-gold:      #CC9B20;
-    --drift-gold-dark: #A87F15;
-    --drift-cream:     #E8D5B0;
-    --drift-mist:      #F6EEE1;
-    --drift-forest:    #2D5016;
+    --drift-navy:      #162C1D;
+    --drift-gold:      #E3AC32;
+    --drift-gold-dark: #B68A28;
+    --drift-cream:     #E9D7B6;
+    --drift-mist:      #F5EDE0;
+    --drift-forest:    #285034;
     --drift-coral:     #E8734A;
   }
 
@@ -49,13 +49,13 @@
   }
 
   ::selection {
-    background-color: #CC9B20;
-    color: #1B3A0B;
+    background-color: #E3AC32;
+    color: #285034;
   }
 
   /* ── Focus styles ── */
   :focus-visible {
-    outline: 2px solid #CC9B20;
+    outline: 2px solid #E3AC32;
     outline-offset: 3px;
     border-radius: 2px;
   }
@@ -91,7 +91,7 @@
 
   /* Gold gradient text */
   .text-gold-gradient {
-    background: linear-gradient(135deg, #CC9B20 0%, #E8D0A0 50%, #CC9B20 100%);
+    background: linear-gradient(135deg, #E3AC32 0%, #F5D068 50%, #E3AC32 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -161,11 +161,11 @@
 .text-shimmer {
   background: linear-gradient(
     120deg,
-    #CC9B20 0%,
-    #E8D0A0 30%,
-    #CC9B20 50%,
-    #E8D0A0 70%,
-    #CC9B20 100%
+    #E3AC32 0%,
+    #F5D068 30%,
+    #E3AC32 50%,
+    #F5D068 70%,
+    #E3AC32 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -185,7 +185,7 @@
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: rgba(204, 155, 32, 0.35);
+  background: rgba(227, 172, 50, 0.35);
   animation: rippleExpand 0.6s ease-out;
 }
 
@@ -205,5 +205,5 @@
   transition: box-shadow 0.3s ease;
 }
 .hover-gold-glow:hover {
-  box-shadow: 0 0 30px rgba(204, 155, 32, 0.25), 0 20px 60px rgba(27, 58, 11, 0.2);
+  box-shadow: 0 0 30px rgba(227, 172, 50, 0.25), 0 20px 60px rgba(22, 44, 29, 0.2);
 }

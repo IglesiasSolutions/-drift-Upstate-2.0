@@ -10,17 +10,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Forest green replaces cold navy — the primary dark brand color (Adirondack backdrop)
-        'drift-navy':       '#1B3A0B',
-        // Rich harvest gold/amber — from the "Upstate" script in the real logo
-        'drift-gold':       '#CC9B20',
-        'drift-gold-dark':  '#A87F15',
-        // Warm sandy cream — from the "DRIFT" wordmark in the real logo
-        'drift-cream':      '#E8D5B0',
-        // Warm cream section backgrounds — replaces cold blue-gray
-        'drift-mist':       '#F6EEE1',
-        // Medium Adirondack forest green
-        'drift-forest':     '#2D5016',
+        // Darkened brand green — nav, footer, dark overlays (readability only)
+        'drift-navy':       '#162C1D',
+        // Exact logo gold — pixel-sampled from "Upstate" script
+        'drift-gold':       '#E3AC32',
+        // Hover/active gold — derived from logo gold
+        'drift-gold-dark':  '#B68A28',
+        // Exact logo cream — pixel-sampled from "DRIFT" wordmark
+        'drift-cream':      '#E9D7B6',
+        // Warm light section backgrounds (UI extension)
+        'drift-mist':       '#F5EDE0',
+        // Exact logo green — pixel-sampled from background (all 4 corners identical)
+        'drift-forest':     '#285034',
         // Warm coral accent — energy and fun moments
         'drift-coral':      '#E8734A',
       },
@@ -83,19 +84,19 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        // Forest green overlay for hero images — warm and natural
+        // Dark brand green overlay for hero images
         'hero-gradient':
-          'linear-gradient(180deg, rgba(27,58,11,0.42) 0%, rgba(27,58,11,0.08) 40%, rgba(27,58,11,0.68) 100%)',
+          'linear-gradient(180deg, rgba(22,44,29,0.42) 0%, rgba(22,44,29,0.08) 40%, rgba(22,44,29,0.68) 100%)',
         'card-gradient':
-          'linear-gradient(180deg, transparent 30%, rgba(27,58,11,0.95) 100%)',
+          'linear-gradient(180deg, transparent 30%, rgba(22,44,29,0.95) 100%)',
         'gold-shimmer':
-          'linear-gradient(135deg, #CC9B20 0%, #ECC97A 50%, #CC9B20 100%)',
+          'linear-gradient(135deg, #E3AC32 0%, #F5D068 50%, #E3AC32 100%)',
       },
       boxShadow: {
-        'gold-sm': '0 0 0 1px rgba(204,155,32,0.3)',
-        'gold':    '0 0 0 2px rgba(204,155,32,0.5)',
-        'lift':    '0 20px 60px rgba(27,58,11,0.18)',
-        'lift-lg': '0 30px 80px rgba(27,58,11,0.28)',
+        'gold-sm': '0 0 0 1px rgba(227,172,50,0.3)',
+        'gold':    '0 0 0 2px rgba(227,172,50,0.5)',
+        'lift':    '0 20px 60px rgba(40,80,52,0.18)',
+        'lift-lg': '0 30px 80px rgba(40,80,52,0.28)',
       },
       transitionTimingFunction: {
         cinematic: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',

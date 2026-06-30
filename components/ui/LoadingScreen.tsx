@@ -86,7 +86,7 @@ export default function LoadingScreen() {
               {/* Wave layer 1 — slow, subtle */}
               <motion.path
                 d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"
-                fill="rgba(204,155,32,0.06)"
+                fill="rgba(227,172,50,0.06)"
                 initial={{ x: 0 }}
                 animate={{ x: [0, -30, 0] }}
                 transition={{
@@ -113,7 +113,7 @@ export default function LoadingScreen() {
               {/* Wave layer 3 — faster, more transparent */}
               <motion.path
                 d="M0,90 C120,70 300,110 480,85 C660,60 840,105 1020,80 C1200,55 1350,95 1440,85 L1440,120 L0,120 Z"
-                fill="rgba(204,155,32,0.04)"
+                fill="rgba(227,172,50,0.04)"
                 initial={{ x: 0 }}
                 animate={{ x: [0, -15, 0] }}
                 transition={{

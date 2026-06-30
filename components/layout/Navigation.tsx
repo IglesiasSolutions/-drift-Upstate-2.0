@@ -39,7 +39,7 @@ export function Navigation() {
       <motion.nav
         initial={false}
         animate={{
-          backgroundColor: isTransparent ? 'rgba(27,58,11,0)' : 'rgba(27,58,11,0.97)',
+          backgroundColor: isTransparent ? 'rgba(22,44,29,0)' : 'rgba(22,44,29,0.97)',
           backdropFilter: isTransparent ? 'blur(0px)' : 'blur(12px)',
         }}
         transition={{ duration: 0.35, ease: 'easeInOut' }}
