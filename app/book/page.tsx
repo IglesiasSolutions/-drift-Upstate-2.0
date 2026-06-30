@@ -54,7 +54,7 @@ export default function BookPage() {
         </div>
 
         {/* GoFish booking widget */}
-        <div className="bg-white shadow-lift">
+        <div className="shadow-lift overflow-hidden">
           <GoFishEmbed />
         </div>
       </div>

@@ -27,12 +27,42 @@ export function GoFishEmbed() {
   }, [])
 
   return (
-    <iframe
-      src="https://resos.gofish.rocks/booking-embed/3000300030003000300032003000350038003500?id=0"
-      width="100%"
-      height="400"
-      id="gofishrocks_embed_0"
-      style={{ overflow: 'hidden', width: '100%', border: 0, outline: 0, height: '400px' }}
-    />
+    <div>
+      {/* Branded header strip above the GoFish widget */}
+      <div className="bg-drift-navy px-8 py-6 flex items-center gap-4 border-b-2 border-drift-gold">
+        <span className="block h-px w-8 bg-drift-gold flex-shrink-0" />
+        <span className="font-montserrat text-xs tracking-widest uppercase text-drift-gold">
+          Secure Booking — Powered by GoFish
+        </span>
+        <span className="block h-px flex-1 bg-drift-gold/30" />
+      </div>
+
+      {/* iframe — CSS filter tones down the light blue without breaking readability */}
+      <iframe
+        src="https://resos.gofish.rocks/booking-embed/3000300030003000300032003000350038003500?id=0"
+        id="gofishrocks_embed_0"
+        width="100%"
+        style={{
+          overflow: 'hidden',
+          width: '100%',
+          border: 0,
+          outline: 0,
+          height: '400px',
+          display: 'block',
+          filter: 'saturate(0.55) brightness(0.97)',
+        }}
+        title="Drift Upstate Booking"
+      />
+
+      {/* Branded footer strip below */}
+      <div className="bg-drift-navy px-8 py-4 flex items-center justify-center gap-2 border-t border-white/10">
+        <span className="font-montserrat text-xs text-white/40 tracking-wide">
+          Questions? Call or text us at{' '}
+          <a href="tel:+13154809410" className="text-drift-gold hover:text-drift-gold/80 transition-colors">
+            (315) 480-9410
+          </a>
+        </span>
+      </div>
+    </div>
   )
 }
