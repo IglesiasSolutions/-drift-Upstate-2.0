@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   },
 }
 
+const owners = teamMembers.slice(0, 2)   // Nate + Brittany
+const mates  = teamMembers.slice(2)      // Vannalee + Solay
+
 export default function CrewPage() {
   return (
     <>
@@ -39,16 +42,15 @@ export default function CrewPage() {
         ]}
       />
 
-      {/* Team members */}
+      {/* Owners — Nate & Brittany */}
       <section className="section-padding bg-drift-navy">
         <div className="max-w-7xl mx-auto px-6">
           <div className="space-y-20">
-            {teamMembers.map((member, i) => {
+            {owners.map((member, i) => {
               const isEven = i % 2 === 0
               return (
                 <ScrollReveal key={member.id} direction="up" delay={0.1}>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    {/* Photo */}
                     <div className={isEven ? '' : 'lg:order-2'}>
                       <div className="relative aspect-[4/3] overflow-hidden shadow-lift-lg">
                         <Image
@@ -60,8 +62,6 @@ export default function CrewPage() {
                         />
                       </div>
                     </div>
-
-                    {/* Text */}
                     <div className={isEven ? '' : 'lg:order-1'}>
                       <h2 className="font-playfair text-3xl md:text-4xl text-white mb-2">
                         {member.name}
@@ -74,13 +74,49 @@ export default function CrewPage() {
                       </p>
                     </div>
                   </div>
-
-                  {i < teamMembers.length - 1 && (
+                  {i < owners.length - 1 && (
                     <div className="mt-20 border-t border-white/10" />
                   )}
                 </ScrollReveal>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* First & Second Mate — Vannalee & Solay */}
+      <section className="section-padding bg-drift-navy border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-center gap-4 mb-16">
+            <span className="block h-px w-10 bg-drift-gold flex-shrink-0" />
+            <span className="font-montserrat text-xs tracking-widest uppercase text-drift-gold">
+              First Mate &amp; Second Mate
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+            {mates.map((member) => (
+              <ScrollReveal key={member.id} direction="up" delay={0.1}>
+                <div className="relative aspect-[4/3] overflow-hidden mb-6 shadow-lift-lg">
+                  <Image
+                    src={member.image}
+                    alt={member.imageAlt}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                <h3 className="font-playfair text-2xl text-white mb-1">
+                  {member.name}
+                </h3>
+                <p className="font-montserrat text-xs tracking-widest uppercase text-drift-gold mb-4">
+                  {member.role}
+                </p>
+                <p className="font-inter text-white/70 text-sm leading-relaxed">
+                  {member.bio}
+                </p>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
