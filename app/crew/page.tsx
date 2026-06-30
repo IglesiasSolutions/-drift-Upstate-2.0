@@ -84,17 +84,17 @@ export default function CrewPage() {
         </div>
       </section>
 
-      {/* First & Second Mate — Vannalee & Solay */}
+      {/* Mates — Vannalee, Solay & Baby Larrea */}
       <section className="section-padding bg-drift-navy border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center gap-4 mb-16">
             <span className="block h-px w-10 bg-drift-gold flex-shrink-0" />
             <span className="font-montserrat text-xs tracking-widest uppercase text-drift-gold">
-              First Mate &amp; Second Mate
+              First, Second &amp; Third Mate
             </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
             {mates.map((member) => (
               <ScrollReveal key={member.id} direction="up" delay={0.1}>
                 <div className="relative aspect-[4/3] overflow-hidden mb-6 shadow-lift-lg">
@@ -103,7 +103,7 @@ export default function CrewPage() {
                     alt={member.imageAlt}
                     fill
                     className="object-cover object-top"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
                 <h3 className="font-playfair text-2xl text-white mb-1">
@@ -117,6 +117,30 @@ export default function CrewPage() {
                 </p>
               </ScrollReveal>
             ))}
+
+            {/* Third Mate — Coming Soon */}
+            <ScrollReveal direction="up" delay={0.2}>
+              <div className="relative aspect-[4/3] mb-6 border-2 border-dashed border-drift-gold/30 flex flex-col items-center justify-center gap-4 bg-white/3">
+                <span className="text-5xl">⚓</span>
+                <div className="text-center px-4">
+                  <p className="font-montserrat text-xs tracking-widest uppercase text-drift-gold mb-1">
+                    Coming Soon
+                  </p>
+                  <p className="font-playfair text-lg text-white/60 italic leading-snug">
+                    A new crew member<br />is on the way
+                  </p>
+                </div>
+              </div>
+              <h3 className="font-playfair text-2xl text-white mb-1">
+                Baby Larrea
+              </h3>
+              <p className="font-montserrat text-xs tracking-widest uppercase text-drift-gold mb-4">
+                Third Mate · Arriving Soon
+              </p>
+              <p className="font-inter text-white/70 text-sm leading-relaxed">
+                The Larrea crew is growing! The newest member is still getting their sea legs, but we have a feeling they&apos;re going to love it out here on Fourth Lake just as much as the rest of the family.
+              </p>
+            </ScrollReveal>
           </div>
         </div>
       </section>
