@@ -21,10 +21,16 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    /* scroll-behavior handled by Lenis smooth scroll */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+  }
+
+  /* Custom cursor — hide native when active */
+  html.cursor-none,
+  html.cursor-none * {
+    cursor: none !important;
   }
 
   body {
@@ -148,4 +154,55 @@
 /* Prevent layout shift from motion divs */
 [data-framer-component-type] {
   will-change: transform, opacity;
+}
+
+/* ─── Premium text effects ──────────────────────────────────── */
+.text-shimmer {
+  background: linear-gradient(
+    120deg,
+    #C9A84C 0%,
+    #E8D5A3 30%,
+    #C9A84C 50%,
+    #E8D5A3 70%,
+    #C9A84C 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmerGold 3s linear infinite;
+}
+
+/* ─── Water / ripple effects ────────────────────────────────── */
+@keyframes rippleExpand {
+  from { transform: scale(0); opacity: 0.6; }
+  to   { transform: scale(2.5); opacity: 0; }
+}
+
+.ripple-click::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.35);
+  animation: rippleExpand 0.6s ease-out;
+}
+
+/* ─── Scroll-driven parallax perf ──────────────────────────── */
+.parallax-layer {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* ─── Section transition helpers ────────────────────────────── */
+.wave-clip-top {
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+/* ─── Gold glow on hover ────────────────────────────────────── */
+.hover-gold-glow {
+  transition: box-shadow 0.3s ease;
+}
+.hover-gold-glow:hover {
+  box-shadow: 0 0 30px rgba(201, 168, 76, 0.25), 0 20px 60px rgba(13, 27, 42, 0.2);
 }

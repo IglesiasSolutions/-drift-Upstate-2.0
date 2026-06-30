@@ -12,6 +12,7 @@ import { AudienceGrid } from '@/components/sections/home/AudienceGrid'
 import { VideoSection } from '@/components/sections/home/VideoSection'
 import { LocationSection } from '@/components/sections/home/LocationSection'
 import { FinalCTA } from '@/components/sections/home/FinalCTA'
+import WaveDivider from '@/components/ui/WaveDivider'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* 1. Hero — full-screen cinematic with video background + sunset countdown */}
+      {/* 1. Hero — full-screen cinematic with video background + parallax */}
       <Hero />
 
       {/* 2. Trust bar — scrolling marquee of social proof */}
@@ -32,11 +33,17 @@ export default function HomePage() {
       {/* 3. Experience intro — editorial two-column */}
       <ExperienceIntro />
 
-      {/* 4. Lake showcase — before/after morning vs. sunset slider */}
+      {/* 4. Lake showcase — draggable before/after morning vs. sunset */}
       <LakeShowcase />
 
-      {/* 5. Experience cards — all tour types, dark background */}
+      {/* Wave: drift-mist → drift-navy */}
+      <WaveDivider fromColor="#E8EFF5" toColor="#0D1B2A" />
+
+      {/* 5. Experience cards — all 7 tour types with 3D tilt, navy background */}
       <ExperienceCards />
+
+      {/* Wave: drift-navy → white */}
+      <WaveDivider fromColor="#0D1B2A" toColor="#ffffff" />
 
       {/* 6. Stats — GSAP animated numbers on scroll */}
       <Stats />
@@ -56,7 +63,10 @@ export default function HomePage() {
       {/* 11. Video section — highlight reel with modal player */}
       <VideoSection />
 
-      {/* 12. Location — Google Maps + weather + contact info */}
+      {/* Wave: drift-navy → white (after video section) */}
+      <WaveDivider fromColor="#0D1B2A" toColor="#ffffff" />
+
+      {/* 12. Location — Google Maps + weather widget + contact info */}
       <LocationSection />
 
       {/* 13. Final CTA — sunset background, booking push */}

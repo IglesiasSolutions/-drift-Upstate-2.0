@@ -5,7 +5,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Button } from '@/components/ui/button'
+import MagneticButton from '@/components/ui/MagneticButton'
 import { SunsetCountdown } from '@/components/sections/home/SunsetCountdown'
 import { siteConfig } from '@/config/site'
 import {
@@ -21,6 +24,8 @@ const fadeUp = (delay: number) => ({
 })
 
 export function Hero() {
+  const heroRef = useRef<HTMLElement>(null)
+  const bgRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const [videoReady, setVideoReady] = useState(false)
 
@@ -35,50 +40,78 @@ export function Hero() {
     return () => clearTimeout(timer)
   }, [])
 
+  // Cinematic parallax — background moves slower than the scroll
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+
+    const ctx = gsap.context(() => {
+      gsap.to(bgRef.current, {
+        yPercent: 28,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        },
+      })
+    }, heroRef)
+
+    return () => ctx.revert()
+  }, [])
+
   return (
     <section
+      ref={heroRef}
       className="relative w-full min-h-screen flex flex-col items-center justify-end overflow-hidden"
       aria-label="Hero — Drift Upstate Boat Tours"
     >
-      {/* ── LCP Image (always renders, handles CLS) ── */}
-      <div className="absolute inset-0 z-0">
+      {/* ── Parallax background layer ── */}
+      <div
+        ref={bgRef}
+        className="absolute inset-0 z-0 parallax-layer"
+        style={{ top: '-15%', bottom: '-15%' }}
+      >
+        {/* LCP Image — always renders, handles CLS */}
         <Image
           src={HOME_HERO_BACKGROUND}
           alt="Fourth Lake, Adirondack Mountains — Eagle Bay, New York"
           fill
           priority
           quality={90}
-          className="object-cover object-center scale-105"
+          className="object-cover object-center"
           sizes="100vw"
         />
+
+        {/* Cinematic video (fades in after load, deferred 2s for LCP) */}
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster={HOME_HERO_BACKGROUND}
+          onCanPlay={() => setVideoReady(true)}
+          className={`absolute inset-0 z-[1] w-full h-full object-cover transition-opacity duration-1500 ${
+            videoReady ? 'opacity-100' : 'opacity-0'
+          }`}
+          aria-hidden="true"
+        >
+          <source src={HOME_HERO_VIDEO_WEBM} type="video/webm" />
+          <source src={HOME_HERO_VIDEO_MP4} type="video/mp4" />
+        </video>
       </div>
 
-      {/* ── Cinematic video overlay (fades in after load) ── */}
-      {/* Replace /videos/hero-reel.mp4 with your actual cinematic drone footage */}
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="none"
-        poster={HOME_HERO_BACKGROUND}
-        onCanPlay={() => setVideoReady(true)}
-        className={`absolute inset-0 z-[1] w-full h-full object-cover transition-opacity duration-1500 ${
-          videoReady ? 'opacity-100' : 'opacity-0'
-        }`}
-        aria-hidden="true"
-      >
-        <source src={HOME_HERO_VIDEO_WEBM} type="video/webm" />
-        <source src={HOME_HERO_VIDEO_MP4} type="video/mp4" />
-      </video>
+      {/* ── Cinematic gradient overlays ── */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-drift-navy/60 via-drift-navy/10 to-drift-navy/90" />
 
-      {/* ── Cinematic gradient overlay ── */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-drift-navy/50 via-drift-navy/15 to-drift-navy/88" />
+      {/* Subtle horizontal vignette */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-drift-navy/20 via-transparent to-drift-navy/20" />
 
-      {/* ── Grain texture ── */}
+      {/* Film grain for cinematic texture */}
       <div
-        className="absolute inset-0 z-10 opacity-25 pointer-events-none mix-blend-overlay"
+        className="absolute inset-0 z-10 opacity-20 pointer-events-none mix-blend-overlay"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E")`,
           backgroundSize: '128px',
@@ -98,7 +131,7 @@ export function Hero() {
           </span>
         </motion.div>
 
-        {/* H1 */}
+        {/* H1 — layered entrance */}
         <motion.h1
           {...fadeUp(0.28)}
           className="font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.05] mb-6 text-balance"
@@ -116,17 +149,21 @@ export function Hero() {
           {siteConfig.subTagline}
         </motion.p>
 
-        {/* CTAs */}
+        {/* CTAs with magnetic attraction */}
         <motion.div
           {...fadeUp(0.58)}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
         >
-          <Button asChild size="xl" variant="primary">
-            <Link href="/book">Book Your Tour →</Link>
-          </Button>
-          <Button asChild size="xl" variant="outline">
-            <Link href="#experiences">See Experiences ↓</Link>
-          </Button>
+          <MagneticButton strength={0.35} radius={100}>
+            <Button asChild size="xl" variant="primary" className="hover-gold-glow">
+              <Link href="/book">Book Your Tour →</Link>
+            </Button>
+          </MagneticButton>
+          <MagneticButton strength={0.25} radius={80}>
+            <Button asChild size="xl" variant="outline">
+              <Link href="#experiences">See Experiences ↓</Link>
+            </Button>
+          </MagneticButton>
         </motion.div>
 
         {/* Trust micro-line */}
@@ -137,20 +174,28 @@ export function Hero() {
           ✓ Easy booking &nbsp;&nbsp;·&nbsp;&nbsp; ✓ Instant confirmation &nbsp;&nbsp;·&nbsp;&nbsp; ✓ Free cancellation
         </motion.p>
 
-        {/* Sunset countdown */}
+        {/* Live sunset countdown */}
         <motion.div {...fadeUp(0.80)}>
           <SunsetCountdown />
         </motion.div>
       </div>
 
-      {/* ── Scroll indicator ── */}
+      {/* ── Animated scroll indicator ── */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.4, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce-gentle"
+        transition={{ delay: 1.6, duration: 0.8 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1"
       >
-        <ChevronDown className="w-6 h-6 text-drift-gold" strokeWidth={1.5} />
+        <span className="font-montserrat text-[10px] tracking-[0.2em] uppercase text-white/30">
+          Scroll
+        </span>
+        <motion.div
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <ChevronDown className="w-5 h-5 text-drift-gold/70" strokeWidth={1.5} />
+        </motion.div>
       </motion.div>
     </section>
   )

@@ -5,6 +5,10 @@ import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingActions } from '@/components/ui/FloatingActions'
 import { SeasonalPromo } from '@/components/sections/home/SeasonalPromo'
+import SmoothScroll from '@/components/ui/SmoothScroll'
+import CustomCursor from '@/components/ui/CustomCursor'
+import ScrollProgress from '@/components/ui/ScrollProgress'
+import LoadingScreen from '@/components/ui/LoadingScreen'
 import { siteConfig } from '@/config/site'
 import './globals.css'
 
@@ -97,12 +101,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="flex flex-col min-h-screen">
-        <AnnouncementBar />
-        <SeasonalPromo />
-        <Navigation />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <FloatingActions />
+        {/* Global cinematic loading screen — first visit only */}
+        <LoadingScreen />
+
+        {/* Premium custom cursor with gold ripple — desktop only */}
+        <CustomCursor />
+
+        {/* Gold scroll progress bar */}
+        <ScrollProgress />
+
+        <SmoothScroll>
+          <AnnouncementBar />
+          <SeasonalPromo />
+          <Navigation />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <FloatingActions />
+        </SmoothScroll>
       </body>
     </html>
   )
