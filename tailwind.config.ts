@@ -10,12 +10,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'drift-navy':   '#0D1B2A',
-        'drift-gold':   '#C9A84C',
-        'drift-gold-dark': '#A8893E',
-        'drift-mist':   '#E8EFF5',
-        'drift-forest': '#2D5016',
-        'drift-coral':  '#E8734A',
+        // Forest green replaces cold navy — the primary dark brand color (Adirondack backdrop)
+        'drift-navy':       '#1B3A0B',
+        // Rich harvest gold/amber — from the "Upstate" script in the real logo
+        'drift-gold':       '#CC9B20',
+        'drift-gold-dark':  '#A87F15',
+        // Warm sandy cream — from the "DRIFT" wordmark in the real logo
+        'drift-cream':      '#E8D5B0',
+        // Warm cream section backgrounds — replaces cold blue-gray
+        'drift-mist':       '#F6EEE1',
+        // Medium Adirondack forest green
+        'drift-forest':     '#2D5016',
+        // Warm coral accent — energy and fun moments
+        'drift-coral':      '#E8734A',
       },
       fontFamily: {
         playfair:   ['var(--font-playfair)', 'Georgia', 'serif'],
@@ -76,18 +83,19 @@ const config: Config = {
         },
       },
       backgroundImage: {
+        // Forest green overlay for hero images — warm and natural
         'hero-gradient':
-          'linear-gradient(180deg, rgba(13,27,42,0.5) 0%, rgba(13,27,42,0.1) 40%, rgba(13,27,42,0.75) 100%)',
+          'linear-gradient(180deg, rgba(27,58,11,0.42) 0%, rgba(27,58,11,0.08) 40%, rgba(27,58,11,0.68) 100%)',
         'card-gradient':
-          'linear-gradient(180deg, transparent 30%, rgba(13,27,42,0.95) 100%)',
+          'linear-gradient(180deg, transparent 30%, rgba(27,58,11,0.95) 100%)',
         'gold-shimmer':
-          'linear-gradient(135deg, #C9A84C 0%, #E8D5A3 50%, #C9A84C 100%)',
+          'linear-gradient(135deg, #CC9B20 0%, #ECC97A 50%, #CC9B20 100%)',
       },
       boxShadow: {
-        'gold-sm': '0 0 0 1px rgba(201,168,76,0.3)',
-        'gold':    '0 0 0 2px rgba(201,168,76,0.5)',
-        'lift':    '0 20px 60px rgba(13,27,42,0.15)',
-        'lift-lg': '0 30px 80px rgba(13,27,42,0.25)',
+        'gold-sm': '0 0 0 1px rgba(204,155,32,0.3)',
+        'gold':    '0 0 0 2px rgba(204,155,32,0.5)',
+        'lift':    '0 20px 60px rgba(27,58,11,0.18)',
+        'lift-lg': '0 30px 80px rgba(27,58,11,0.28)',
       },
       transitionTimingFunction: {
         cinematic: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',

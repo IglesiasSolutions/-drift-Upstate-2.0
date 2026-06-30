@@ -122,7 +122,7 @@ export default function CustomCursor() {
 
         ctx.beginPath()
         ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2)
-        ctx.strokeStyle = `rgba(201, 168, 76, ${ripple.opacity})`
+        ctx.strokeStyle = `rgba(204, 155, 32, ${ripple.opacity})`
         ctx.lineWidth = 1.5
         ctx.stroke()
       }

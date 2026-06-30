@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Instagram, Facebook, Youtube, Music2, Mail, Phone, MapPin, Clock } from 'lucide-react'
 import { siteConfig } from '@/config/site'
+import { Logo } from '@/components/ui/Logo'
 import { NewsletterForm } from '@/components/layout/NewsletterForm'
 
 const quickLinks = [
@@ -35,10 +36,7 @@ export function Footer() {
           {/* Column 1 — Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-5">
-              <span className="font-playfair text-2xl font-bold text-white">
-                DRIFT{' '}
-                <span className="text-drift-gold">UPSTATE</span>
-              </span>
+              <Logo variant="footer" />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
               The First Cycle Boat Tour in the Adirondacks. Family owned, locally operated, and

@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Logo } from '@/components/ui/Logo'
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 
@@ -38,7 +39,7 @@ export function Navigation() {
       <motion.nav
         initial={false}
         animate={{
-          backgroundColor: isTransparent ? 'rgba(13,27,42,0)' : 'rgba(13,27,42,0.97)',
+          backgroundColor: isTransparent ? 'rgba(27,58,11,0)' : 'rgba(27,58,11,0.97)',
           backdropFilter: isTransparent ? 'blur(0px)' : 'blur(12px)',
         }}
         transition={{ duration: 0.35, ease: 'easeInOut' }}
@@ -56,15 +57,10 @@ export function Navigation() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center group"
+            className="flex items-center"
             aria-label="Drift Upstate — Home"
           >
-            <span className="font-playfair text-xl md:text-2xl font-bold text-white tracking-tight">
-              DRIFT{' '}
-              <span className="text-drift-gold group-hover:text-white transition-colors duration-300">
-                UPSTATE
-              </span>
-            </span>
+            <Logo variant="nav" />
           </Link>
 
           {/* Desktop Nav Links */}
