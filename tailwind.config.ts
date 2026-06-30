@@ -30,6 +30,8 @@ const config: Config = {
         marquee:   'marquee 30s linear infinite',
         'fade-up': 'fadeUp 0.6s ease-out forwards',
         'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
+        'accordion-down': 'accordion-down 0.25s ease-out',
+        'accordion-up':   'accordion-up 0.25s ease-out',
       },
       keyframes: {
         marquee: {
@@ -43,6 +45,14 @@ const config: Config = {
         bounceGentle: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%':      { transform: 'translateY(8px)' },
+        },
+        'accordion-down': {
+          from: { height: '0' },
+          to:   { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to:   { height: '0' },
         },
       },
       backgroundImage: {
