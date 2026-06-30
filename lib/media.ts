@@ -309,8 +309,8 @@ export const VIDEO_BEHIND_SCENES_ID = 'dQw4w9WgXcQ'
 // BEFORE / AFTER SLIDER
 // ────────────────────────────────────────────────────────────────────────────
 
-export const LAKE_MORNING = u('photo-1470071459604-3b5ec3a7fe05', 1400, 800)
-// REPLACE: Early morning on Fourth Lake — mist on the water, calm, quiet, golden dawn light
+export const LAKE_MORNING = '/gallery/lake-morning-cruise.webp'
+// Drift Upstate boat full of guests, bright blue sky, sun low over Adirondack peaks
 
-export const LAKE_SUNSET = '/gallery/boat-lake-wide-sunset.png'
-// Wide cycle boat shot at golden hour — Fourth Lake, Adirondack peaks, full boat visible
+export const LAKE_SUNSET = '/gallery/lake-sunset-charter.webp'
+// Drift Upstate boat full of guests, fiery orange/gold sunset sky over the lake
