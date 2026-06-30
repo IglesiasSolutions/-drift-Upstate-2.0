@@ -209,26 +209,20 @@ export const ABOUT_BOAT_PHOTO = '/gallery/boat-sunset-crowd.jpeg'
 // CREW PAGE
 // ────────────────────────────────────────────────────────────────────────────
 
-export const CREW_HERO = u('photo-1488188840666-e2308741a62f', 1920, 900)
-// REPLACE: Full crew group photo on dock — casual/candid, everyone grinning
+export const CREW_HERO = '/crew/portrait-6.jpeg'
+// Nate Lareya at the helm — golden sunset, full boat of guests behind him
 
-export const CREW_CAPTAIN_1 = u('photo-1560250097-0b93528c311a', 600, 750)
-// REPLACE: Head Captain portrait — editorial quality, on or near the water, natural light
+export const CREW_CAPTAIN_1 = '/crew/portrait-6.jpeg'
+// Nate Lareya — Captain & Co-Owner
 
-export const CREW_CAPTAIN_2 = u('photo-1568602471122-7832951cc4c5', 600, 750)
-// REPLACE: Second captain — on the boat, confident, Fourth Lake in background
+export const CREW_CAPTAIN_2 = '/crew/portrait-1.jpeg'
+// Britney Lareya — Co-Owner
 
-export const CREW_MEMBER_1 = u('photo-1494790108377-be9c29b29330', 400, 400)
-// REPLACE: Sarah (Guest Experience Lead) — dock, sunny, genuine smile
+export const CREW_MEMBER_1 = '/crew/portrait-9.jpeg'
+// Vanille Lareya — Little Helper
 
-export const CREW_MEMBER_2 = u('photo-1507003211169-0a1dd7228f2d', 400, 400)
-// REPLACE: Tom (First Mate) — on the water, vibrant energy
-
-export const CREW_MEMBER_3 = u('photo-1438761681033-6461ffad8d80', 400, 400)
-// REPLACE: Casey (Events Coordinator) — dock with Adirondack trees in background
-
-export const CREW_MEMBER_4 = u('photo-1500648767791-00dcc994a43e', 400, 400)
-// REPLACE: Ryan (Dock Crew) — candid laugh, casual uniform, water behind him
+export const CREW_MEMBER_2 = '/crew/portrait-8.jpeg'
+// Sole Lareya — Little Helper
 
 // ────────────────────────────────────────────────────────────────────────────
 // SEASONAL PROMOTIONS
