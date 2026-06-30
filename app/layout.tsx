@@ -82,6 +82,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               description: siteConfig.description,
               url: siteConfig.url,
               telephone: siteConfig.contact.phone,
+              logo: {
+                '@type': 'ImageObject',
+                url: `${siteConfig.url}/images/logo.webp`,
+                width: 2000,
+                height: 1357,
+              },
+              image: siteConfig.ogImage,
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: siteConfig.location.city,

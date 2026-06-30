@@ -121,8 +121,15 @@ export function Navigation() {
             transition={{ duration: 0.25 }}
             className="fixed inset-0 z-40 bg-drift-navy flex flex-col"
           >
-            {/* Close button */}
-            <div className="flex justify-end p-6 pt-7">
+            {/* Overlay header — logo left, close right */}
+            <div className="flex items-center justify-between px-6 pt-6 pb-2">
+              <Link
+                href="/"
+                onClick={() => setIsMenuOpen(false)}
+                aria-label="Drift Upstate — Home"
+              >
+                <Logo variant="nav" />
+              </Link>
               <button
                 onClick={() => setIsMenuOpen(false)}
                 className="text-white hover:text-drift-gold transition-colors p-2"
@@ -133,7 +140,7 @@ export function Navigation() {
             </div>
 
             {/* Links */}
-            <div className="flex flex-col items-center justify-center flex-1 gap-8 -mt-16">
+            <div className="flex flex-col items-center justify-center flex-1 gap-8">
               {siteConfig.nav.map((link, i) => (
                 <motion.div
                   key={link.href}
