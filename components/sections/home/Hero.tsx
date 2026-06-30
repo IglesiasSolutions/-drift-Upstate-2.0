@@ -63,7 +63,7 @@ export function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative w-full min-h-screen flex flex-col items-center justify-end overflow-hidden"
+      className="relative w-full min-h-[65vh] md:min-h-screen flex flex-col items-center justify-end overflow-hidden"
       aria-label="Hero — Drift Upstate Boat Tours"
     >
       {/* ── Parallax background layer ── */}
