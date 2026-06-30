@@ -105,10 +105,10 @@ export const tours: TourData[] = [
     name: 'Your Boat. Your Moment.',
     shortName: 'Private Charter',
     type: 'Private Charter',
-    tagline: 'Reserve the entire boat exclusively for your group.',
+    tagline: 'Reserve the entire boat exclusively for your group — 2 hours, your rules.',
     headline: 'When only the best will do.',
     description:
-      'Take complete control of the entire Drift Upstate experience. Private charters give you the whole boat, your own captain, your playlist, and a memory that belongs entirely to your group.',
+      'Take complete control of the entire Drift Upstate experience. Private charters give you the whole boat, 2 full hours, your own captain, your playlist, and a memory that belongs entirely to your group.',
     detailCopy: [
       'Whether you\'re planning a bachelorette weekend, celebrating a milestone birthday, closing a deal with your team, or simply wanting a private sunset for two — a private charter is the most extraordinary way to experience Eagle Bay and Fourth Lake.',
       'We work with you ahead of time to customize every detail. Decorations, special requests, themed music, timing around the sunset — it\'s your boat, your rules. We just make sure it\'s perfect.',
@@ -144,19 +144,19 @@ export const tours: TourData[] = [
     testimonialAuthor: 'Megan K. — Syracuse, NY · Google Review',
     metaTitle: 'Private Cycle Boat Charter — Drift Upstate · Eagle Bay, NY',
     metaDescription:
-      'Reserve the entire Drift Upstate cycle boat exclusively for your group. Perfect for bachelorettes, birthdays, proposals, and corporate events. Fourth Lake, Eagle Bay NY.',
+      'Reserve the entire Drift Upstate cycle boat exclusively for your group. 2 hours, from $700. Perfect for bachelorettes, birthdays, proposals, and corporate events. Fourth Lake, Eagle Bay NY.',
   },
   {
     slug: 'coffee-cruise',
     name: 'Morning on the Lake',
     shortName: 'Coffee Cruise',
     type: 'Coffee Cruise',
-    tagline: 'Start your day the Adirondack way — fresh air, calm water, great coffee.',
+    tagline: 'Start your day the Adirondack way — fresh air, calm water, and coffee on board.',
     headline: 'The most scenic cup of coffee you\'ll ever have.',
     description:
       'Before the world wakes up, before the crowds arrive, before the noise begins — there\'s a window of pure Adirondack magic that most visitors never find. The Coffee Cruise is your key to that moment.',
     detailCopy: [
-      'We set out early, when the mist is still rising off Fourth Lake and the mountains catch the first light of the day. Small group, no rush, just the sound of the water and whatever you decide to put in your thermos.',
+      'We set out early, when the mist is still rising off Fourth Lake and the mountains catch the first light of the day. Small group, no rush, just the sound of the water and coffee from our on-board coffee bar.',
       'This is the Adirondacks at their most honest. No performance, no party energy — just the raw, quiet beauty of one of New York\'s most extraordinary natural places, experienced at the pace it deserves.',
     ],
     duration: '45 Minutes',

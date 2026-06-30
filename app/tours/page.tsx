@@ -23,9 +23,9 @@ export const metadata: Metadata = {
 
 // Comparison table data
 const comparisonRows = [
-  { label: 'Duration',        public: '90 min',      private: '90–120 min',  coffee: '60 min',      ladies: '90 min',     corporate: '90–120 min', wedding: '90–120 min', family: '90 min' },
+  { label: 'Duration',        public: '90 min',      private: '2 hours',     coffee: '45 min',      ladies: '90 min',     corporate: '90–120 min', wedding: '90–120 min', family: '90 min' },
   { label: 'Capacity',        public: 'Up to 14',    private: 'Full boat',   coffee: 'Max 8',       ladies: 'Up to 14',   corporate: 'Full boat',  wedding: 'Full boat',  family: 'Up to 14' },
-  { label: 'Starting Price',  public: '$35/person',   private: 'Custom',      coffee: '$30/person',   ladies: '$45/person', corporate: 'Custom',     wedding: 'Custom',     family: '$35/person' },
+  { label: 'Starting Price',  public: '$45/person',  private: 'From $700',   coffee: '$30/person',  ladies: '$45/person', corporate: 'Custom',     wedding: 'Custom',     family: '$45/person' },
   { label: 'Private Booking', public: '—',            private: '✓',           coffee: '—',            ladies: 'Optional',   corporate: '✓',          wedding: '✓',          family: '—' },
   { label: 'BYOB',            public: '✓',            private: '✓',           coffee: '✓',            ladies: '✓',          corporate: '✓',          wedding: '✓',          family: '✓' },
   { label: 'Sunset Option',   public: '✓',            private: '✓',           coffee: '—',            ladies: '✓',          corporate: '✓',          wedding: '✓',          family: '✓' },

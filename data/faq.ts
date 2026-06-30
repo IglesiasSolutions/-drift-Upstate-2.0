@@ -56,7 +56,7 @@ export const faqs: FAQItem[] = [
     categorySlug: 'about',
     question: 'Can we bring alcohol on the tour?',
     answer:
-      'Yes! Drift Upstate is BYOB (bring your own beverages). We ask that all drinks be in cans or served in cups — no glass bottles on the boat for safety reasons. Soft-sided coolers fit easily and are encouraged. Please drink responsibly, and remember that our captain has final say over the safety of all guests at all times.',
+      'Yes! Drift Upstate is BYOB (bring your own beverages). We allow up to a 6-pack per person. We ask that all drinks be in cans or served in cups — no glass bottles on the boat for safety reasons. Soft-sided coolers fit easily and are encouraged. Please drink responsibly, and remember that our captain has final say over the safety of all guests at all times.',
   },
   {
     id: 'tour-length',
@@ -64,7 +64,7 @@ export const faqs: FAQItem[] = [
     categorySlug: 'about',
     question: 'How long are the tours?',
     answer:
-      'Public tours and Ladies Night are 90 minutes. Coffee Cruises run 60 minutes. Private charters are available in 90 or 120-minute options. We\'ll let you know the exact route and departure/return times when you book.',
+      'Public tours and Ladies Night are 90 minutes. Coffee Cruises run 45 minutes. Private charters are 2 hours. We\'ll let you know the exact route and departure/return times when you book.',
   },
 
   // ── BOOKING & CANCELLATION ─────────────────────────────────────────────────
@@ -150,7 +150,7 @@ export const faqs: FAQItem[] = [
     categorySlug: 'byob',
     question: 'What should I bring on the tour?',
     answer:
-      'We recommend: your beverages and snacks (BYOB, cans only, no glass), a soft-sided cooler, sunscreen and sunglasses, a light layer for evening/morning tours, comfortable shoes or sandals with straps (no flip-flops that could slip), and your phone fully charged for photos (the views are worth it). That\'s really it — we handle everything else.',
+      'We recommend: your beverages and snacks (BYOB, cans only, no glass, up to a 6-pack per person), a soft-sided cooler, sunscreen and sunglasses, a light layer for evening/morning tours, comfortable shoes or sandals with straps (no flip-flops that could slip), and your phone fully charged for photos (the views are worth it). Coffee Cruise guests don\'t need to worry about drinks — we have a coffee bar on board.',
   },
   {
     id: 'food-on-boat',
