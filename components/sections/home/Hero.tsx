@@ -63,7 +63,7 @@ export function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative w-full min-h-[65vh] md:min-h-screen flex flex-col items-center justify-end overflow-hidden"
+      className="relative w-full min-h-[75vh] md:min-h-screen flex flex-col items-center justify-end overflow-hidden"
       aria-label="Hero — Drift Upstate Boat Tours"
     >
       {/* ── Parallax background layer ── */}
@@ -119,7 +119,7 @@ export function Hero() {
       />
 
       {/* ── Hero Content — lower third ── */}
-      <div className="relative z-20 w-full max-w-5xl mx-auto px-6 pb-24 md:pb-32 text-center text-white">
+      <div className="relative z-20 w-full max-w-5xl mx-auto px-6 pb-12 md:pb-32 text-center text-white">
         {/* Season badge */}
         <motion.div
           {...fadeUp(0.1)}
@@ -134,7 +134,7 @@ export function Hero() {
         {/* H1 — layered entrance */}
         <motion.h1
           {...fadeUp(0.28)}
-          className="font-playfair text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white leading-[1.05] mb-6 text-balance"
+          className="font-playfair text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white leading-[1.05] mb-4 md:mb-6 text-balance"
         >
           The First Cycle Boat Tour
           <br />
@@ -144,7 +144,7 @@ export function Hero() {
         {/* Subheadline */}
         <motion.p
           {...fadeUp(0.44)}
-          className="font-inter text-lg sm:text-xl md:text-2xl text-white/75 mb-10 max-w-2xl mx-auto font-light"
+          className="font-inter text-lg sm:text-xl md:text-2xl text-white/75 mb-6 md:mb-10 max-w-2xl mx-auto font-light"
         >
           {siteConfig.subTagline}
         </motion.p>
@@ -152,7 +152,7 @@ export function Hero() {
         {/* CTAs with magnetic attraction */}
         <motion.div
           {...fadeUp(0.58)}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-5 md:mb-10"
         >
           <MagneticButton strength={0.35} radius={100}>
             <Button asChild size="xl" variant="primary" className="hover-gold-glow">
@@ -169,7 +169,7 @@ export function Hero() {
         {/* Trust micro-line */}
         <motion.p
           {...fadeUp(0.70)}
-          className="font-montserrat text-xs tracking-widest uppercase text-white/45 mb-8"
+          className="font-montserrat text-xs tracking-widest uppercase text-white/45 mb-4 md:mb-8"
         >
           ✓ Easy booking &nbsp;&nbsp;·&nbsp;&nbsp; ✓ Instant confirmation &nbsp;&nbsp;·&nbsp;&nbsp; ✓ Free cancellation (48+ hrs)
         </motion.p>

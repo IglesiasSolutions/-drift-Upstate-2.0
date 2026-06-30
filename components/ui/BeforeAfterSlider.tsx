@@ -41,18 +41,22 @@ export function BeforeAfterSlider({
     setIsDragging(true)
   }, [])
 
-  const onTouchStart = useCallback(() => {
+  const onTouchStart = useCallback((e: React.TouchEvent) => {
+    e.preventDefault()
     setIsDragging(true)
   }, [])
 
   useEffect(() => {
     if (!isDragging) return
     const onMouseMove = (e: MouseEvent) => getPositionFromEvent(e.clientX)
-    const onTouchMove = (e: TouchEvent) => getPositionFromEvent(e.touches[0].clientX)
+    const onTouchMove = (e: TouchEvent) => {
+      e.preventDefault()
+      getPositionFromEvent(e.touches[0].clientX)
+    }
     const stop = () => setIsDragging(false)
     window.addEventListener('mousemove', onMouseMove)
     window.addEventListener('mouseup', stop)
-    window.addEventListener('touchmove', onTouchMove, { passive: true })
+    window.addEventListener('touchmove', onTouchMove, { passive: false })
     window.addEventListener('touchend', stop)
     return () => {
       window.removeEventListener('mousemove', onMouseMove)
@@ -109,7 +113,7 @@ export function BeforeAfterSlider({
       {/* Drag handle */}
       <div
         className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 bg-white rounded-full shadow-xl flex items-center justify-center z-10 hover:scale-110 transition-transform"
-        style={{ left: `${position}%` }}
+        style={{ left: `${position}%`, touchAction: 'none' }}
         onMouseDown={onMouseDown}
         onTouchStart={onTouchStart}
       >
