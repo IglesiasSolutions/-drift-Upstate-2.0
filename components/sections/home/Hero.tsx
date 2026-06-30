@@ -1,29 +1,49 @@
 'use client'
 
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { SunsetCountdown } from '@/components/sections/home/SunsetCountdown'
 import { siteConfig } from '@/config/site'
+import {
+  HOME_HERO_BACKGROUND,
+  HOME_HERO_VIDEO_MP4,
+  HOME_HERO_VIDEO_WEBM,
+} from '@/lib/media'
 
-/* ── Animation variants ───────────────────────────────────────── */
 const fadeUp = (delay: number) => ({
   initial:  { opacity: 0, y: 32 },
   animate:  { opacity: 1, y: 0 },
-  transition: { duration: 0.9, delay, ease: [0.25, 0.46, 0.45, 0.94] },
+  transition: { duration: 0.9, delay, ease: [0.25, 0.46, 0.45, 0.94] as const },
 })
 
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [videoReady, setVideoReady] = useState(false)
+
+  // Defer video load until after LCP image has painted
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (videoRef.current) {
+        videoRef.current.src = HOME_HERO_VIDEO_MP4
+        videoRef.current.load()
+      }
+    }, 2000)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <section
       className="relative w-full min-h-screen flex flex-col items-center justify-end overflow-hidden"
       aria-label="Hero — Drift Upstate Boat Tours"
     >
-      {/* ── Background Image (replace src with real drone footage still) ── */}
+      {/* ── LCP Image (always renders, handles CLS) ── */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=85"
+          src={HOME_HERO_BACKGROUND}
           alt="Fourth Lake, Adirondack Mountains — Eagle Bay, New York"
           fill
           priority
@@ -33,36 +53,54 @@ export function Hero() {
         />
       </div>
 
-      {/* ── Cinematic gradient overlay ── */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-drift-navy/55 via-drift-navy/20 to-drift-navy/85" />
+      {/* ── Cinematic video overlay (fades in after load) ── */}
+      {/* Replace /videos/hero-reel.mp4 with your actual cinematic drone footage */}
+      <video
+        ref={videoRef}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="none"
+        poster={HOME_HERO_BACKGROUND}
+        onCanPlay={() => setVideoReady(true)}
+        className={`absolute inset-0 z-[1] w-full h-full object-cover transition-opacity duration-1500 ${
+          videoReady ? 'opacity-100' : 'opacity-0'
+        }`}
+        aria-hidden="true"
+      >
+        <source src={HOME_HERO_VIDEO_WEBM} type="video/webm" />
+        <source src={HOME_HERO_VIDEO_MP4} type="video/mp4" />
+      </video>
 
-      {/* ── Subtle animated grain texture overlay ── */}
+      {/* ── Cinematic gradient overlay ── */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-drift-navy/50 via-drift-navy/15 to-drift-navy/88" />
+
+      {/* ── Grain texture ── */}
       <div
-        className="absolute inset-0 z-10 opacity-30 pointer-events-none"
+        className="absolute inset-0 z-10 opacity-25 pointer-events-none mix-blend-overlay"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E")`,
-          backgroundRepeat: 'repeat',
           backgroundSize: '128px',
         }}
       />
 
       {/* ── Hero Content — lower third ── */}
-      <div className="relative z-20 w-full max-w-5xl mx-auto px-6 pb-28 md:pb-36 text-center text-white">
-        {/* Eyebrow */}
+      <div className="relative z-20 w-full max-w-5xl mx-auto px-6 pb-24 md:pb-32 text-center text-white">
+        {/* Season badge */}
         <motion.div
-          {...fadeUp(0.2)}
-          className="flex items-center justify-center gap-4 mb-7"
+          {...fadeUp(0.1)}
+          className="inline-flex items-center gap-2 bg-drift-gold/15 border border-drift-gold/30 backdrop-blur-sm px-4 py-1.5 mb-8"
         >
-          <span className="block h-px w-10 sm:w-16 bg-drift-gold/80" />
+          <span className="w-1.5 h-1.5 bg-drift-gold rounded-full animate-pulse" />
           <span className="font-montserrat text-xs tracking-widest uppercase text-drift-gold">
-            {siteConfig.location.city}, {siteConfig.location.stateAbbr} &nbsp;·&nbsp; The {siteConfig.location.region}
+            {siteConfig.season.year} Season Now Open &nbsp;·&nbsp; {siteConfig.location.city}, {siteConfig.location.stateAbbr}
           </span>
-          <span className="block h-px w-10 sm:w-16 bg-drift-gold/80" />
         </motion.div>
 
         {/* H1 */}
         <motion.h1
-          {...fadeUp(0.38)}
+          {...fadeUp(0.28)}
           className="font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.05] mb-6 text-balance"
         >
           The First Cycle Boat Tour
@@ -72,16 +110,16 @@ export function Hero() {
 
         {/* Subheadline */}
         <motion.p
-          {...fadeUp(0.54)}
-          className="font-inter text-lg sm:text-xl md:text-2xl text-white/75 mb-11 max-w-2xl mx-auto font-light"
+          {...fadeUp(0.44)}
+          className="font-inter text-lg sm:text-xl md:text-2xl text-white/75 mb-10 max-w-2xl mx-auto font-light"
         >
           {siteConfig.subTagline}
         </motion.p>
 
         {/* CTAs */}
         <motion.div
-          {...fadeUp(0.68)}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          {...fadeUp(0.58)}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
         >
           <Button asChild size="xl" variant="primary">
             <Link href="/book">Book Your Tour →</Link>
@@ -93,19 +131,24 @@ export function Hero() {
 
         {/* Trust micro-line */}
         <motion.p
-          {...fadeUp(0.82)}
-          className="mt-8 font-montserrat text-xs tracking-widest uppercase text-white/45"
+          {...fadeUp(0.70)}
+          className="font-montserrat text-xs tracking-widest uppercase text-white/45 mb-8"
         >
           ✓ Easy booking &nbsp;&nbsp;·&nbsp;&nbsp; ✓ Instant confirmation &nbsp;&nbsp;·&nbsp;&nbsp; ✓ Free cancellation
         </motion.p>
+
+        {/* Sunset countdown */}
+        <motion.div {...fadeUp(0.80)}>
+          <SunsetCountdown />
+        </motion.div>
       </div>
 
       {/* ── Scroll indicator ── */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.8 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce-gentle"
+        transition={{ delay: 1.4, duration: 0.8 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce-gentle"
       >
         <ChevronDown className="w-6 h-6 text-drift-gold" strokeWidth={1.5} />
       </motion.div>

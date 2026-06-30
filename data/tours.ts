@@ -7,6 +7,12 @@ import {
   TOUR_COFFEE_DETAIL_1, TOUR_COFFEE_DETAIL_2, TOUR_COFFEE_DETAIL_3,
   TOUR_LADIES_HERO, TOUR_LADIES_CARD,
   TOUR_LADIES_DETAIL_1, TOUR_LADIES_DETAIL_2, TOUR_LADIES_DETAIL_3,
+  TOUR_CORPORATE_HERO, TOUR_CORPORATE_CARD,
+  TOUR_CORPORATE_DETAIL_1, TOUR_CORPORATE_DETAIL_2, TOUR_CORPORATE_DETAIL_3,
+  TOUR_WEDDING_HERO, TOUR_WEDDING_CARD,
+  TOUR_WEDDING_DETAIL_1, TOUR_WEDDING_DETAIL_2, TOUR_WEDDING_DETAIL_3,
+  TOUR_FAMILY_HERO, TOUR_FAMILY_CARD,
+  TOUR_FAMILY_DETAIL_1, TOUR_FAMILY_DETAIL_2, TOUR_FAMILY_DETAIL_3,
 } from '@/lib/media'
 
 export interface TourInclusion {
@@ -231,6 +237,153 @@ export const tours: TourData[] = [
     metaTitle: 'Ladies Night & Bachelorette Boat Tour — Drift Upstate · Eagle Bay, NY',
     metaDescription:
       'Celebrate on the water with Drift Upstate\'s Ladies Night cycle boat tour. Perfect for bachelorette parties and birthdays on Fourth Lake. From $45/person. Eagle Bay, NY.',
+  },
+
+  // ── Corporate Events ───────────────────────────────────────────────────────
+  {
+    slug: 'corporate',
+    name: 'The Corporate Escape',
+    shortName: 'Corporate Events',
+    type: 'Corporate & Team Events',
+    tagline: 'Team building experiences that no conference room could ever replicate.',
+    headline: 'Take your team off-site — onto the water.',
+    description:
+      'The best teams don\'t just work well together — they play well together. Drift Upstate offers private corporate charters that create genuine bonding moments in one of the most beautiful settings in New York State.',
+    detailCopy: [
+      'There\'s something that happens when you take a team off-site and put them on a boat together. The hierarchy flattens. The usual office dynamics dissolve. What\'s left is a group of people actually connecting — laughing, competing at the pedals, talking about things that never come up in a meeting.',
+      'We specialize in corporate groups, from small leadership retreats to full team outings. Everything is private, everything is customizable, and everything is designed to send your team back to work with more energy and better relationships than when they left.',
+    ],
+    duration: '90 or 120 Minutes',
+    capacity: 'Full boat for your team',
+    priceFrom: 'Custom Pricing',
+    priceNote: 'based on group size & duration',
+    badge: 'CORPORATE · Inquire',
+    cardImage: TOUR_CORPORATE_CARD,
+    cardImageAlt: 'Corporate team enjoying a private boat tour on Fourth Lake',
+    heroImage: TOUR_CORPORATE_HERO,
+    heroImageAlt: 'Professional team relaxing on a private charter on Fourth Lake',
+    gallery: [
+      { src: TOUR_CORPORATE_DETAIL_1, alt: 'Team members pedaling and laughing on corporate charter' },
+      { src: TOUR_CORPORATE_DETAIL_2, alt: 'Corporate team toasting on the water at golden hour' },
+      { src: TOUR_CORPORATE_DETAIL_3, alt: 'Group photo of corporate team on dock before boarding' },
+    ],
+    inclusions: [
+      'Full boat reserved exclusively for your team',
+      'Dedicated captain for the duration of your charter',
+      'Custom music playlist — you set the vibe',
+      'Flexible scheduling including early morning and evening',
+      'BYOB — cans and soft-sided coolers welcome',
+      'Branded signage and team swag placement available',
+      'Corporate invoice billing available on request',
+      'Follow-up group photo package optional add-on',
+    ],
+    perfectFor: ['Team Building', 'Client Entertainment', 'Leadership Retreats', 'Office Parties', 'Sales Team Incentives', 'Company Milestones'],
+    ctaText: 'Request Corporate Charter',
+    proTip: 'Book 4–6 weeks in advance for weekday corporate outings. Evenings on the lake make exceptional client entertainment — the sunset closes every deal.',
+    testimonialQuote:
+      'We brought our entire sales team out for a corporate charter and it was the best team-building event we\'ve done in five years. No slides, no forced activities — just a beautiful lake, a great captain, and a team that left closer than they arrived.',
+    testimonialAuthor: 'Mark D. — VP Sales, Albany NY · Google Review',
+    metaTitle: 'Corporate Team Building Boat Tour — Drift Upstate · Eagle Bay, NY',
+    metaDescription:
+      'Private corporate charters on Fourth Lake for team building, client entertainment, and company events. Eagle Bay, Adirondacks. Custom pricing for groups.',
+  },
+
+  // ── Wedding Charter ─────────────────────────────────────────────────────────
+  {
+    slug: 'wedding',
+    name: 'The Bridal Charter',
+    shortName: 'Wedding Charter',
+    type: 'Wedding & Engagement',
+    tagline: 'The most romantic backdrop in the Adirondacks, reserved just for you.',
+    headline: 'Start your forever on the water.',
+    description:
+      'Fourth Lake at golden hour is one of the most breathtaking settings in New York State. Our Bridal Charter puts you, your partner, and your wedding party in the middle of it — for moments and photographs that nothing else can match.',
+    detailCopy: [
+      'Whether it\'s an engagement proposal, a bridal party excursion, a post-ceremony celebration, or a honeymoon sunset cruise — the Bridal Charter is your private, perfect moment on the lake. We work with you ahead of time to ensure every detail is exactly right.',
+      'Some of our most cherished guest memories began with a ring, a boat, and a sunset over the Adirondacks. We can help you create yours — complete with decorations, flowers, champagne service, and a captain who knows exactly when to create the perfect moment.',
+    ],
+    duration: '90 or 120 Minutes',
+    capacity: 'Up to 14 guests',
+    priceFrom: 'From $350',
+    priceNote: 'based on duration & add-ons',
+    badge: 'WEDDING · From $350',
+    cardImage: TOUR_WEDDING_CARD,
+    cardImageAlt: 'Romantic couple on private charter at sunset on Fourth Lake',
+    heroImage: TOUR_WEDDING_HERO,
+    heroImageAlt: 'Couple on the Drift Upstate cycle boat at golden hour on Fourth Lake',
+    gallery: [
+      { src: TOUR_WEDDING_DETAIL_1, alt: 'Couple on cycle boat with Adirondack mountains behind them' },
+      { src: TOUR_WEDDING_DETAIL_2, alt: 'Bridal party celebrating on the water at sunset' },
+      { src: TOUR_WEDDING_DETAIL_3, alt: 'Intimate romantic moment on the private charter' },
+    ],
+    inclusions: [
+      'Full private boat exclusively for your group',
+      'Experienced captain who coordinates with your vision',
+      'Floral decoration packages available',
+      'Champagne / sparkling wine service optional add-on',
+      'Custom music playlist — your special songs',
+      'Sunset departure timing coordinated for you',
+      'Coordination with wedding photographers welcome',
+      'Proposal surprise coordination available',
+    ],
+    perfectFor: ['Proposals', 'Engagement Photos', 'Bridal Party Experience', 'Honeymoon Sunset', 'Rehearsal Dinner Follow-up', 'Anniversary Celebration'],
+    ctaText: 'Plan Your Bridal Charter',
+    proTip: 'If you\'re planning a proposal, tell us in advance. Our captain will help create the perfect moment — including timing the boat position for the light.',
+    testimonialQuote:
+      'My fiancé proposed on the Drift Upstate boat as the sun was setting behind the mountains. I had no idea. The captain knew and had positioned us perfectly. I said yes, obviously. It was the most beautiful moment of my life.',
+    testimonialAuthor: 'Emma L. — Saratoga Springs, NY · Google Review',
+    metaTitle: 'Wedding & Engagement Boat Charter — Drift Upstate · Fourth Lake, NY',
+    metaDescription:
+      'Private bridal charters on Fourth Lake for proposals, engagement photos, bridal parties, and honeymoons. The most romantic backdrop in the Adirondacks.',
+  },
+
+  // ── Family Cruise ───────────────────────────────────────────────────────────
+  {
+    slug: 'family',
+    name: 'Family Adventure',
+    shortName: 'Family Cruise',
+    type: 'Family Experience',
+    tagline: 'The lake adventure your whole family will be talking about until next summer.',
+    headline: 'The best summer memory your kids will ever make.',
+    description:
+      'Drift Upstate is genuinely family-friendly — and we mean that. Kids love pedaling, parents love the scenery, and everyone leaves with the kind of shared memory that becomes a family story.',
+    detailCopy: [
+      'There aren\'t many activities that work equally well for a 7-year-old and a 70-year-old. A cycle boat tour on Fourth Lake is one of them. Kids get to pedal (as much or as little as they want), see the Adirondacks from a completely new perspective, and experience something they\'ve never done before.',
+      'Our captains are experienced with families and know how to keep the energy right — engaging the kids, answering every "what\'s that mountain called?" question, and making sure parents get a few peaceful minutes to just look at the view.',
+    ],
+    duration: '90 Minutes',
+    capacity: 'Up to 14 guests',
+    priceFrom: 'From $35',
+    priceNote: 'per person (kids under 5 free)',
+    badge: '90 MIN · From $35/person',
+    cardImage: TOUR_FAMILY_CARD,
+    cardImageAlt: 'Happy family with kids on cycle boat tour on Fourth Lake',
+    heroImage: TOUR_FAMILY_HERO,
+    heroImageAlt: 'Family enjoying a cycle boat tour on Fourth Lake with Adirondack mountains',
+    gallery: [
+      { src: TOUR_FAMILY_DETAIL_1, alt: 'Children pedaling with big smiles on the cycle boat' },
+      { src: TOUR_FAMILY_DETAIL_2, alt: 'Multi-generational family together on the lake' },
+      { src: TOUR_FAMILY_DETAIL_3, alt: 'Kids looking at Adirondack scenery from the boat' },
+    ],
+    inclusions: [
+      'All ages welcome — kids under 5 ride free',
+      'Life jackets sized for children provided',
+      'Captain experienced with family groups',
+      'Pedaling is optional — rest and soak in the view',
+      'BYOB (adults) + kid-friendly snacks welcome',
+      'Binoculars on board for wildlife spotting',
+      'Perfect complement to any Adirondack family vacation',
+      'Departs from Eagle Bay dock',
+    ],
+    perfectFor: ['Families with Kids', 'Multi-Generational Groups', 'Family Reunions', 'Grandparent Visits', 'Summer Vacation Activity', 'First-Time Adirondack Visitors'],
+    ctaText: 'Book Family Adventure',
+    proTip: 'Younger kids (5-10) often enjoy the experience most on calmer morning tours. Ask about our family-friendly departures when booking.',
+    testimonialQuote:
+      'We brought our kids (8 and 11) and both sets of grandparents. Every single person — from the 8-year-old to the 74-year-old grandmother — had the absolute best time. This is the rare activity that truly works for everyone.',
+    testimonialAuthor: 'The Henderson Family — Boston, MA · Google Review',
+    metaTitle: 'Family Cycle Boat Tour — Drift Upstate · Eagle Bay, Adirondacks',
+    metaDescription:
+      'Family-friendly cycle boat tours on Fourth Lake in the Adirondacks. All ages welcome, kids under 5 free. Life jackets provided. From $35/person. Eagle Bay, NY.',
   },
 ]
 

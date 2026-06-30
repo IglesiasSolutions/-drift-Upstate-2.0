@@ -2,8 +2,10 @@ import type { Metadata } from 'next'
 import { Hero } from '@/components/sections/home/Hero'
 import { TrustBar } from '@/components/sections/home/TrustBar'
 import { ExperienceIntro } from '@/components/sections/home/ExperienceIntro'
+import { LakeShowcase } from '@/components/sections/home/LakeShowcase'
 import { ExperienceCards } from '@/components/sections/home/ExperienceCards'
 import { Stats } from '@/components/sections/home/Stats'
+import { ReviewsCarousel } from '@/components/sections/home/ReviewsCarousel'
 import { Testimonials } from '@/components/sections/home/Testimonials'
 import { InstagramGrid } from '@/components/sections/home/InstagramGrid'
 import { AudienceGrid } from '@/components/sections/home/AudienceGrid'
@@ -21,37 +23,43 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* 1. Hero — full-screen cinematic with CTAs */}
+      {/* 1. Hero — full-screen cinematic with video background + sunset countdown */}
       <Hero />
 
       {/* 2. Trust bar — scrolling marquee of social proof */}
       <TrustBar />
 
-      {/* 3. Experience intro — two-column editorial section */}
+      {/* 3. Experience intro — editorial two-column */}
       <ExperienceIntro />
 
-      {/* 4. Experience cards — 2×2 grid of tours, dark background */}
+      {/* 4. Lake showcase — before/after morning vs. sunset slider */}
+      <LakeShowcase />
+
+      {/* 5. Experience cards — all tour types, dark background */}
       <ExperienceCards />
 
-      {/* 5. Stats — GSAP animated numbers on scroll */}
+      {/* 6. Stats — GSAP animated numbers on scroll */}
       <Stats />
 
-      {/* 6. Testimonials — auto-advancing carousel */}
+      {/* 7. Google Reviews carousel — verified social proof */}
+      <ReviewsCarousel />
+
+      {/* 8. Testimonials — auto-advancing quote carousel */}
       <Testimonials />
 
-      {/* 7. Instagram grid — 6-photo social proof */}
+      {/* 9. Instagram grid — masonry with lightbox */}
       <InstagramGrid />
 
-      {/* 8. Audience grid — who we serve */}
+      {/* 10. Audience grid — who we serve */}
       <AudienceGrid />
 
-      {/* 9. Video section — highlight reel with modal player */}
+      {/* 11. Video section — highlight reel with modal player */}
       <VideoSection />
 
-      {/* 10. Location — map + contact info card */}
+      {/* 12. Location — Google Maps + weather + contact info */}
       <LocationSection />
 
-      {/* 11. Final CTA — sunset background with booking push */}
+      {/* 13. Final CTA — sunset background, booking push */}
       <FinalCTA />
     </>
   )

@@ -3,6 +3,8 @@ import { inter, playfair, montserrat } from '@/lib/fonts'
 import { AnnouncementBar } from '@/components/layout/AnnouncementBar'
 import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
+import { FloatingActions } from '@/components/ui/FloatingActions'
+import { SeasonalPromo } from '@/components/sections/home/SeasonalPromo'
 import { siteConfig } from '@/config/site'
 import './globals.css'
 
@@ -96,9 +98,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="flex flex-col min-h-screen">
         <AnnouncementBar />
+        <SeasonalPromo />
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />
+        <FloatingActions />
       </body>
     </html>
   )

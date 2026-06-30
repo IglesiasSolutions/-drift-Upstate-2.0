@@ -6,6 +6,7 @@ import { Clock, Users, CheckCircle, Star, ArrowRight, Info } from 'lucide-react'
 import { PageHero } from '@/components/sections/shared/PageHero'
 import { PreFooterCTA } from '@/components/sections/shared/PreFooterCTA'
 import { ScrollReveal, Stagger, StaggerItem } from '@/components/ui/scroll-reveal'
+import { ImageGallery } from '@/components/ui/ImageGallery'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { tours, getTourBySlug, getAllTourSlugs } from '@/data/tours'
@@ -105,22 +106,10 @@ export default async function TourDetailPage({ params }: Props) {
                       Gallery
                     </span>
                   </div>
-                  <div className="grid grid-cols-3 gap-3">
-                    {tour.gallery.map((img, i) => (
-                      <div
-                        key={i}
-                        className={`relative overflow-hidden ${i === 0 ? 'col-span-2 aspect-[4/3]' : 'aspect-square'}`}
-                      >
-                        <Image
-                          src={img.src}
-                          alt={img.alt}
-                          fill
-                          className="object-cover hover:scale-105 transition-transform duration-500"
-                          sizes="(max-width: 768px) 50vw, 33vw"
-                        />
-                      </div>
-                    ))}
-                  </div>
+                  <ImageGallery
+                    images={tour.gallery}
+                    className="grid-cols-3"
+                  />
                 </div>
               </ScrollReveal>
 

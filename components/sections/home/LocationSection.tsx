@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { MapPin, Clock, Phone, Mail, Navigation } from 'lucide-react'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
 import { Button } from '@/components/ui/button'
+import { WeatherWidget } from '@/components/sections/home/WeatherWidget'
 import { siteConfig } from '@/config/site'
 
 export function LocationSection() {
@@ -116,8 +117,16 @@ export function LocationSection() {
                 </ul>
               </div>
 
+              {/* Current Lake Conditions */}
+              <div className="mt-8 pt-8 border-t border-white/10">
+                <p className="font-montserrat text-xs tracking-widest uppercase text-drift-gold mb-3">
+                  Current Lake Conditions
+                </p>
+                <WeatherWidget />
+              </div>
+
               {/* CTA */}
-              <div className="mt-10 flex flex-col gap-3">
+              <div className="mt-8 flex flex-col gap-3">
                 <Button asChild size="lg" variant="primary" className="w-full justify-center">
                   <Link href="/book">Book Your Tour →</Link>
                 </Button>
