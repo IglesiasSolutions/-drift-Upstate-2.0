@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design Tokens ─────────────────────────────────────────── */
+@layer base {
+  :root {
+    --drift-navy:      #0D1B2A;
+    --drift-gold:      #C9A84C;
+    --drift-gold-dark: #A8893E;
+    --drift-mist:      #E8EFF5;
+    --drift-forest:    #2D5016;
+    --drift-coral:     #E8734A;
+  }
+
+  /* ── Reset & base ── */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-white text-drift-navy font-inter overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-playfair;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    line-height: 1.75;
+  }
+
+  ::selection {
+    background-color: #C9A84C;
+    color: #0D1B2A;
+  }
+
+  /* ── Focus styles ── */
+  :focus-visible {
+    outline: 2px solid #C9A84C;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+/* ─── Custom utilities ──────────────────────────────────────── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Section vertical rhythm */
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+
+  .section-padding-sm {
+    @apply py-16 md:py-20;
+  }
+
+  /* Eyebrow label style */
+  .eyebrow {
+    @apply font-montserrat text-xs tracking-widest uppercase;
+  }
+
+  /* Gold gradient text */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #C9A84C 0%, #E8D5A3 50%, #C9A84C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Full-bleed image container */
+  .img-cover {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+}
+
+/* ─── Component styles ──────────────────────────────────────── */
+@layer components {
+  /* Marquee track for trust bar */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  /* Glass card effect */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  /* Gold rule separator */
+  .gold-rule {
+    @apply block h-px w-12 bg-drift-gold;
+  }
+}
+
+/* ─── Custom keyframes (supplementing tailwind.config.ts) ─────── */
+@keyframes marquee {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceGentle {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(8px); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ─── Framer Motion overrides ────────────────────────────────── */
+/* Prevent layout shift from motion divs */
+[data-framer-component-type] {
+  will-change: transform, opacity;
+}
