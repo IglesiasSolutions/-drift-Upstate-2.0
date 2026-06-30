@@ -52,12 +52,12 @@ export default function CrewPage() {
                 <ScrollReveal key={member.id} direction="up" delay={0.1}>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <div className={isEven ? '' : 'lg:order-2'}>
-                      <div className="relative aspect-[4/3] overflow-hidden shadow-lift-lg">
+                      <div className="relative aspect-[3/4] overflow-hidden shadow-lift-lg">
                         <Image
                           src={member.image}
                           alt={member.imageAlt}
                           fill
-                          className="object-cover object-center"
+                          className="object-cover object-top"
                           sizes="(max-width: 1024px) 100vw, 50vw"
                         />
                       </div>
@@ -97,7 +97,7 @@ export default function CrewPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
             {mates.map((member) => (
               <ScrollReveal key={member.id} direction="up" delay={0.1}>
-                <div className="relative aspect-[4/3] overflow-hidden mb-6 shadow-lift-lg">
+                <div className="relative aspect-square overflow-hidden mb-6 shadow-lift-lg">
                   <Image
                     src={member.image}
                     alt={member.imageAlt}
@@ -120,7 +120,7 @@ export default function CrewPage() {
 
             {/* Third Mate — Coming Soon */}
             <ScrollReveal direction="up" delay={0.2}>
-              <div className="relative aspect-[4/3] mb-6 border-2 border-dashed border-drift-gold/30 flex flex-col items-center justify-center gap-4 bg-white/3">
+              <div className="relative aspect-square mb-6 border-2 border-dashed border-drift-gold/30 flex flex-col items-center justify-center gap-4 bg-white/3">
                 <span className="text-5xl">⚓</span>
                 <div className="text-center px-4">
                   <p className="font-montserrat text-xs tracking-widest uppercase text-drift-gold mb-1">
