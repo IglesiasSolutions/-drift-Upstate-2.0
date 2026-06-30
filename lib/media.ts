@@ -209,8 +209,8 @@ export const ABOUT_BOAT_PHOTO = '/gallery/boat-sunset-crowd.jpeg'
 // CREW PAGE
 // ────────────────────────────────────────────────────────────────────────────
 
-export const CREW_HERO = '/gallery/family-sunset-boat.png'
-// Larrea family on the boat at golden sunset — wide landscape hero
+export const CREW_HERO = '/gallery/larrea-family.png'
+// The Larrea family together on the boat at golden sunset — wide landscape hero
 
 export const CREW_CAPTAIN_1 = '/crew/portrait-6.jpeg'
 // Nate Lareya — Captain & Co-Owner
