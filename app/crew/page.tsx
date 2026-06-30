@@ -33,9 +33,10 @@ export default function CrewPage() {
         title="Our Team"
         subtitle={teamIntro}
         image={CREW_HERO}
-        imageAlt="Nate Larrea at the helm of the Drift Upstate boat at sunset"
+        imageAlt="The Larrea family on the Drift Upstate boat at golden hour"
         height="md"
         overlay="heavy"
+        imagePosition="top"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Our Team' },
