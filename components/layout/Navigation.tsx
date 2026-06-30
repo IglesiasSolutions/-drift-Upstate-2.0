@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Logo } from '@/components/ui/Logo'
+import { AnnouncementBar } from '@/components/layout/AnnouncementBar'
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 
@@ -48,6 +49,8 @@ export function Navigation() {
           isScrolled ? 'shadow-lg' : ''
         )}
       >
+        {!isScrolled && <AnnouncementBar />}
+
         <div
           className={cn(
             'max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-300',
