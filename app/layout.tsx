@@ -1,10 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import { inter, playfair, montserrat } from '@/lib/fonts'
-import { AnnouncementBar } from '@/components/layout/AnnouncementBar'
 import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingActions } from '@/components/ui/FloatingActions'
-import { SeasonalPromo } from '@/components/sections/home/SeasonalPromo'
 import SmoothScroll from '@/components/ui/SmoothScroll'
 import CustomCursor from '@/components/ui/CustomCursor'
 import ScrollProgress from '@/components/ui/ScrollProgress'
@@ -118,8 +116,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ScrollProgress />
 
         <SmoothScroll>
-          <AnnouncementBar />
-          <SeasonalPromo />
           <Navigation />
           <main className="flex-1">{children}</main>
           <Footer />
