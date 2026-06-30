@@ -29,7 +29,7 @@ export const siteConfig = {
 
   social: {
     instagram: 'https://instagram.com/driftupstate',
-    facebook: 'https://facebook.com/driftupstate',
+    facebook: 'https://www.facebook.com/profile.php?id=61588718680391',
     tiktok: 'https://tiktok.com/@driftupstate',
     youtube: 'https://youtube.com/@driftupstate',
     instagramHandle: '@driftupstate',

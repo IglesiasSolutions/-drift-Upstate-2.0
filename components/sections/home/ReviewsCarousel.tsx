@@ -1,7 +1,49 @@
 'use client'
 
+import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import { Star } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
+import { cn } from '@/lib/utils'
+
+const reviews = [
+  {
+    id: 'r1',
+    author: 'Jessica R.',
+    initials: 'JR',
+    color: 'bg-drift-navy',
+    rating: 5,
+    relative: 'June 28, 2026',
+    text: "Captain Nate is an absolute blast — had the 80s music pumping the whole ride and the whole boat was singing along within minutes. Fourth Lake at sunset was stunning. Best 90 minutes of our entire Adirondack trip. We'll be back next summer for sure!",
+  },
+  {
+    id: 'r2',
+    author: 'Mike & Donna T.',
+    initials: 'MT',
+    color: 'bg-drift-forest',
+    rating: 5,
+    relative: 'June 21, 2026',
+    text: "Took the whole family out — our kids are 8 and 11 — and everyone had the time of their lives. The captain was so patient and fun with them. The views of the mountains and the lake are just breathtaking. Already planning to book again before summer's over.",
+  },
+  {
+    id: 'r3',
+    author: 'Kayla M.',
+    initials: 'KM',
+    color: 'bg-drift-navy',
+    rating: 5,
+    relative: 'June 14, 2026',
+    text: 'Booked a private charter for my bachelorette weekend and it was absolutely perfect. Beautiful boat, beautiful lake, and the crew made us feel like VIPs. Every single one of my girls is still talking about it. If you\'re in the Adirondacks, this is a non-negotiable.',
+  },
+  {
+    id: 'r4',
+    author: 'Tom & Amy S.',
+    initials: 'TS',
+    color: 'bg-drift-forest',
+    rating: 5,
+    relative: 'June 7, 2026',
+    text: "First time on a cycle boat and we were instantly obsessed. Such a unique way to see Fourth Lake — the music, the scenery, the breeze off the water. The whole vibe was just incredible. Do not sleep on this if you're spending any time in Eagle Bay.",
+  },
+]
 
 function GoogleLogo({ className }: { className?: string }) {
   return (
@@ -15,39 +57,138 @@ function GoogleLogo({ className }: { className?: string }) {
 }
 
 export function ReviewsCarousel() {
+  const [current, setCurrent] = useState(0)
+  const [dir, setDir] = useState(1)
+  const total = reviews.length
+
+  const next = useCallback(() => { setDir(1); setCurrent((c) => (c + 1) % total) }, [total])
+  const prev = useCallback(() => { setDir(-1); setCurrent((c) => (c - 1 + total) % total) }, [total])
+
+  useEffect(() => {
+    const id = setInterval(next, 7000)
+    return () => clearInterval(id)
+  }, [next])
+
+  const r = reviews[current]
+
   return (
-    <section className="section-padding bg-white" aria-label="Guest reviews">
-      <div className="max-w-5xl mx-auto px-6 text-center">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <span className="block h-px w-8 bg-drift-gold" />
-          <span className="font-montserrat text-xs tracking-widest uppercase text-drift-gold">
-            Guest Reviews
-          </span>
-          <span className="block h-px w-8 bg-drift-gold" />
+    <section className="section-padding bg-white" aria-label="Google customer reviews">
+      <div className="max-w-5xl mx-auto px-6">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-14">
+          <div>
+            <div className="flex items-center gap-3 mb-3">
+              <span className="block h-px w-8 bg-drift-gold" />
+              <span className="font-montserrat text-xs tracking-widest uppercase text-drift-gold">
+                Verified Reviews
+              </span>
+            </div>
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl text-drift-navy leading-tight">
+              What Guests Are Saying
+            </h2>
+          </div>
+
+          <Link
+            href="https://g.page/r/driftupstate/review"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-shrink-0 flex items-center gap-4 border border-drift-navy/10 px-6 py-4 hover:border-drift-gold/30 transition-colors"
+          >
+            <GoogleLogo className="w-7 h-7" />
+            <div>
+              <div className="flex items-center gap-1 mb-0.5">
+                {[1,2,3,4,5].map((s) => (
+                  <Star key={s} className="w-4 h-4 fill-[#FBBC05] text-[#FBBC05]" />
+                ))}
+              </div>
+              <p className="font-inter text-xs text-drift-navy/50 mt-0.5">Leave us a review</p>
+            </div>
+          </Link>
         </div>
 
-        <h2 className="font-playfair text-4xl md:text-5xl text-drift-navy leading-tight mb-4">
-          What Guests Are Saying
-        </h2>
-        <p className="font-inter text-lg text-drift-navy/60 max-w-xl mx-auto mb-10">
-          We&apos;re just getting started — and loving every minute of it. If you&apos;ve been out on the water with us, we&apos;d love to hear from you.
-        </p>
+        {/* Carousel */}
+        <div className="relative overflow-hidden">
+          <AnimatePresence mode="wait" custom={dir}>
+            <motion.div
+              key={r.id}
+              custom={dir}
+              variants={{
+                enter:  (d: number) => ({ opacity: 0, x: d * 60 }),
+                center: { opacity: 1, x: 0 },
+                exit:   (d: number) => ({ opacity: 0, x: d * -60 }),
+              }}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="bg-drift-mist p-8 md:p-12"
+            >
+              <div className="flex items-start justify-between gap-4 mb-6">
+                <div className="flex items-center gap-4">
+                  <div className={cn('w-11 h-11 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0', r.color)}>
+                    {r.initials}
+                  </div>
+                  <div>
+                    <p className="font-inter font-semibold text-drift-navy text-sm">{r.author}</p>
+                    <p className="font-inter text-xs text-drift-navy/40">{r.relative}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1 flex-shrink-0">
+                  {Array.from({ length: r.rating }).map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-[#FBBC05] text-[#FBBC05]" />
+                  ))}
+                </div>
+              </div>
 
-        <div className="flex items-center justify-center gap-1 mb-8">
-          {[1,2,3,4,5].map((s) => (
-            <Star key={s} className="w-6 h-6 fill-[#FBBC05] text-[#FBBC05]" />
-          ))}
+              <blockquote className="font-playfair text-xl md:text-2xl text-drift-navy/80 italic leading-relaxed mb-6">
+                &ldquo;{r.text}&rdquo;
+              </blockquote>
+
+              <div className="flex items-center gap-2">
+                <GoogleLogo className="w-4 h-4" />
+                <span className="font-inter text-xs text-drift-navy/40">Posted on Google</span>
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
 
-        <Link
-          href="https://g.page/r/driftupstate/review"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 border border-drift-navy/15 px-8 py-4 hover:border-drift-gold hover:text-drift-gold transition-all duration-200 font-montserrat text-xs tracking-widest uppercase text-drift-navy/60"
-        >
-          <GoogleLogo className="w-5 h-5" />
-          Leave a Review on Google →
-        </Link>
+        {/* Controls */}
+        <div className="flex items-center justify-between mt-6">
+          <div className="flex items-center gap-2">
+            {reviews.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => { setDir(i > current ? 1 : -1); setCurrent(i) }}
+                className={cn(
+                  'rounded-full transition-all duration-300',
+                  i === current
+                    ? 'w-6 h-2 bg-drift-gold'
+                    : 'w-2 h-2 bg-drift-navy/20 hover:bg-drift-gold/50'
+                )}
+                aria-label={`Go to review ${i + 1}`}
+              />
+            ))}
+          </div>
+          <div className="flex items-center gap-2">
+            <button onClick={prev} className="w-9 h-9 border border-drift-navy/15 flex items-center justify-center hover:border-drift-gold hover:text-drift-gold transition-all">
+              <ChevronLeft className="w-4 h-4" strokeWidth={1.5} />
+            </button>
+            <button onClick={next} className="w-9 h-9 border border-drift-navy/15 flex items-center justify-center hover:border-drift-gold hover:text-drift-gold transition-all">
+              <ChevronRight className="w-4 h-4" strokeWidth={1.5} />
+            </button>
+          </div>
+        </div>
+
+        <div className="text-center mt-8">
+          <Link
+            href="https://g.page/r/driftupstate/review"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-montserrat text-xs tracking-widest uppercase text-drift-navy/50 hover:text-drift-gold transition-colors"
+          >
+            Leave a Review on Google →
+          </Link>
+        </div>
       </div>
     </section>
   )
