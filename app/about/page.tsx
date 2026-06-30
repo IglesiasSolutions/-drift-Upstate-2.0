@@ -53,12 +53,6 @@ export default function AboutPage() {
                   />
                 </div>
                 <div className="hidden sm:block absolute -top-5 -left-5 w-20 h-20 border-t-4 border-l-4 border-drift-gold" />
-                <div className="hidden sm:block absolute -bottom-5 -right-5 bg-drift-navy text-white p-6 max-w-[200px]">
-                  <p className="font-playfair text-3xl font-bold text-drift-gold">500+</p>
-                  <p className="font-montserrat text-xs tracking-widest uppercase text-white/60 mt-1">
-                    Guests and Counting
-                  </p>
-                </div>
               </div>
             </ScrollReveal>
 

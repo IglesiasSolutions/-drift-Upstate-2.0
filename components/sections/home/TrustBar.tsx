@@ -1,11 +1,11 @@
 import { Anchor, Star, Users, Calendar, Mountain } from 'lucide-react'
 
 const items = [
-  { icon: Star,     text: '4.9-Star Rated on Google' },
   { icon: Anchor,   text: 'First Cycle Boat in the Adirondacks' },
   { icon: Users,    text: 'Family Owned & Operated' },
   { icon: Calendar, text: 'Available 7 Days a Week' },
-  { icon: Mountain, text: 'Est. Eagle Bay, NY' },
+  { icon: Mountain, text: 'Eagle Bay, NY · Est. 2026' },
+  { icon: Star,     text: 'Rated 5 Stars by Our Guests' },
 ]
 
 /* Duplicated for seamless marquee loop */

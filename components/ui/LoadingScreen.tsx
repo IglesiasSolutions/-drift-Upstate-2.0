@@ -59,7 +59,7 @@ export default function LoadingScreen() {
                 ease: [0.22, 1, 0.36, 1],
               }}
             >
-              Eagle Bay &middot; New York &middot; Since 2023
+              Eagle Bay &middot; New York &middot; Est. 2026
             </motion.p>
 
             {/* Gold line */}

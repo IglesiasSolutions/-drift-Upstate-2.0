@@ -96,11 +96,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               openingHours: 'Mo-Su 08:00-20:00',
               priceRange: '$$',
               hasMap: siteConfig.location.mapsUrl,
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: '4.9',
-                reviewCount: '127',
-              },
             }),
           }}
         />

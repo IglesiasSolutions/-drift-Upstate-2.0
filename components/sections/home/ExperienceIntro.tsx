@@ -42,9 +42,9 @@ export function ExperienceIntro() {
               {/* Stats micro-row */}
               <div className="flex flex-wrap items-center gap-6 mt-10 mb-10">
                 {[
-                  { value: '90', unit: 'MIN', label: 'Tours' },
+                  { value: '90', unit: 'MIN', label: 'Tour Duration' },
                   { value: '#1', unit: '', label: 'Cycle Boat in ADK' },
-                  { value: '4.9★', unit: '', label: 'Google Rating' },
+                  { value: '14', unit: '', label: 'Guests Max' },
                 ].map((stat) => (
                   <div key={stat.label} className="flex flex-col">
                     <span className="font-playfair text-3xl font-bold text-drift-navy">
@@ -86,7 +86,7 @@ export function ExperienceIntro() {
                   First&nbsp;in the&nbsp;ADKs
                 </p>
                 <p className="font-montserrat text-xs tracking-widest uppercase text-drift-gold mt-1">
-                  Since {new Date().getFullYear() - 3}
+                  Est. 2026
                 </p>
               </div>
 

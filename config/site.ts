@@ -44,9 +44,9 @@ export const siteConfig = {
   },
 
   stats: [
-    { value: 500, suffix: '+', label: 'Happy Guests' },
-    { value: 4.9, decimals: 1, suffix: '★', label: 'Google Rating' },
-    { value: 3, suffix: '+', label: 'Tours Weekly' },
+    { value: 90, suffix: ' MIN', label: 'Tour Duration' },
+    { value: 14, suffix: '', label: 'Max Guests Per Tour' },
+    { value: 7, suffix: ' Days', label: 'Open Every Week' },
     { value: 1, prefix: '#', suffix: '', label: 'Cycle Boat in the Adirondacks' },
   ],
 
