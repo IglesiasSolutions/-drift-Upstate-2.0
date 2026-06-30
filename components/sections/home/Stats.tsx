@@ -71,7 +71,7 @@ export function Stats() {
                 value={stat.value}
                 suffix={stat.suffix}
                 prefix={'prefix' in stat ? stat.prefix : ''}
-                decimals={'decimals' in stat ? stat.decimals : 0}
+                decimals={'decimals' in stat ? (stat as { decimals: number }).decimals : 0}
                 label={stat.label}
                 index={i}
               />
