@@ -58,7 +58,8 @@ export default function CrewPage() {
                           src={member.image}
                           alt={member.imageAlt}
                           fill
-                          className="object-cover object-top"
+                          className="object-cover"
+                          style={{ objectPosition: '50% 20%' }}
                           sizes="(max-width: 1024px) 100vw, 50vw"
                         />
                       </div>
@@ -103,7 +104,8 @@ export default function CrewPage() {
                     src={member.image}
                     alt={member.imageAlt}
                     fill
-                    className="object-cover object-top"
+                    className="object-cover"
+                    style={{ objectPosition: '50% 20%' }}
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
