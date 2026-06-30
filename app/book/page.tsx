@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-import { Suspense } from 'react'
 import { CheckCircle } from 'lucide-react'
-import { BookingFlow } from '@/components/sections/booking/BookingFlow'
+import { GoFishEmbed } from '@/components/sections/booking/GoFishEmbed'
 
 export const metadata: Metadata = {
   title: 'Book a Tour — Drift Upstate · Eagle Bay, NY',
@@ -54,15 +53,9 @@ export default function BookPage() {
           ))}
         </div>
 
-        {/* Booking flow */}
-        <div className="bg-white p-8 md:p-12 shadow-lift">
-          <Suspense fallback={
-            <div className="flex items-center justify-center py-24">
-              <div className="font-inter text-sm text-drift-navy/40">Loading…</div>
-            </div>
-          }>
-            <BookingFlow />
-          </Suspense>
+        {/* GoFish booking widget */}
+        <div className="bg-white shadow-lift">
+          <GoFishEmbed />
         </div>
       </div>
     </div>
