@@ -18,14 +18,14 @@ const u = (id: string, w = 1920, h = 1080, q = 85) =>
 // HOME PAGE
 // ────────────────────────────────────────────────────────────────────────────
 
-export const HOME_HERO_BACKGROUND = u('photo-1506905925346-21bda4d32df4')
-// REPLACE: Drone shot — Drift Upstate cycle boat on Fourth Lake, golden hour, Adirondack peaks in bg
+export const HOME_HERO_BACKGROUND = '/hero/hero-background.webp'
+// Drift Upstate cycle boat on Fourth Lake at golden hour — Adirondack peaks in background
 
 export const HOME_INTRO_LIFESTYLE = u('photo-1501854140801-50d01698950b', 900, 1125)
 // REPLACE: Candid group shot — guests laughing on cycle boat, daytime, mountains visible
 
-export const HOME_FINALCTA_SUNSET = u('photo-1472213984618-c79aaec7fef0', 1920, 1080)
-// REPLACE: Dramatic Adirondack sunset over Fourth Lake — warm gold and orange tones
+export const HOME_FINALCTA_SUNSET = '/hero/hero-background.webp'
+// Drift Upstate cycle boat at golden hour — sunset over Fourth Lake and Adirondack peaks
 
 // ── Hero Video (deferred after LCP image loads) ─────────────────────────────
 export const HOME_HERO_VIDEO_MP4 = '/videos/hero-reel.mp4'
