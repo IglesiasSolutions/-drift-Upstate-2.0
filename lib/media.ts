@@ -21,19 +21,18 @@ const u = (id: string, w = 1920, h = 1080, q = 85) =>
 export const HOME_HERO_BACKGROUND = '/hero/hero-background.webp'
 // Drift Upstate cycle boat on Fourth Lake at golden hour — Adirondack peaks in background
 
-export const HOME_INTRO_LIFESTYLE = u('photo-1501854140801-50d01698950b', 900, 1125)
-// REPLACE: Candid group shot — guests laughing on cycle boat, daytime, mountains visible
+export const HOME_INTRO_LIFESTYLE = '/gallery/portrait-3.jpeg'
+// Drift Upstate koozie + cocktail on boat table — sunset over the lake, on-brand lifestyle detail
 
-export const HOME_FINALCTA_SUNSET = '/hero/hero-background.webp'
-// Drift Upstate cycle boat at golden hour — sunset over Fourth Lake and Adirondack peaks
+export const HOME_FINALCTA_SUNSET = '/gallery/flyer-main.jpeg'
+// Dramatic Adirondack sunset — Drift Upstate cycle boat on Fourth Lake, blazing red/orange sky
 
 // ── Hero Video (deferred after LCP image loads) ─────────────────────────────
 export const HOME_HERO_VIDEO_MP4 = '/videos/hero-reel.mp4'
-// REPLACE: 15-30 second cinematic loop — drone orbit of cycle boat at golden hour, no audio
-// Compressed to ≤8MB. H.264, 1920×1080, 24fps, constant quality CRF 23
+// 30-second 720p ad reel — Drift Upstate cycle boat on Fourth Lake
 
 export const HOME_HERO_VIDEO_WEBM = '/videos/hero-reel.webm'
-// REPLACE: Same clip encoded as WebM/VP9 for Chrome/Firefox — ≤6MB
+// REPLACE: WebM/VP9 encode of hero reel for Chrome/Firefox (not yet available)
 
 export const HOME_HERO_VIDEO_POSTER = HOME_HERO_BACKGROUND
 // REPLACE: Best frame from hero video — shows while video loads
@@ -42,11 +41,11 @@ export const HOME_HERO_VIDEO_POSTER = HOME_HERO_BACKGROUND
 // TOURS OVERVIEW PAGE
 // ────────────────────────────────────────────────────────────────────────────
 
-export const TOURS_HERO = u('photo-1544551763-46a013bb70d5', 1920, 900)
-// REPLACE: Aerial orbit shot of cycle boat from above, full Fourth Lake visible below
+export const TOURS_HERO = '/favicon/favicon-2.png'
+// Drift Upstate cycle boat at golden hour — adults, Fourth Lake, Adirondack peaks
 
-export const TOURS_COMPARISON_BG = u('photo-1506905925346-21bda4d32df4', 1920, 1080)
-// REPLACE: Wide establishing shot of Eagle Bay dock and marina area
+export const TOURS_COMPARISON_BG = '/hero/hero-background.webp'
+// Drift Upstate cycle boat on Fourth Lake — wide golden hour establishing shot
 
 // ────────────────────────────────────────────────────────────────────────────
 // PUBLIC TOUR — The Classic Drift
@@ -266,20 +265,20 @@ export const BOOKING_CONFIRMATION = u('photo-1506905925346-21bda4d32df4', 1920, 
 // INSTAGRAM GRID (12 posts — pull from real API, these are stand-ins)
 // ────────────────────────────────────────────────────────────────────────────
 
-export const IG_POST_1 = u('photo-1488188840666-e2308741a62f', 600, 600)
-// REPLACE: Best guest group shot — golden hour, full energy, shareable
+export const IG_POST_1 = '/hero/hero-background.webp'
+// Drift Upstate cycle boat — family, golden hour, Fourth Lake and Adirondack peaks
 
-export const IG_POST_2 = u('photo-1506905925346-21bda4d32df4', 600, 600)
-// REPLACE: Adirondack peaks reflecting on Fourth Lake — jaw-dropping scenery
+export const IG_POST_2 = '/gallery/flyer-main.jpeg'
+// Drift Upstate cycle boat — dramatic red/orange Adirondack sunset
 
-export const IG_POST_3 = u('photo-1501854140801-50d01698950b', 600, 600)
-// REPLACE: Aerial of cycle boat on the lake — our most saved photo
+export const IG_POST_3 = '/favicon/favicon-2.png'
+// Drift Upstate cycle boat — adult group, golden hour, Fourth Lake
 
-export const IG_POST_4 = u('photo-1470071459604-3b5ec3a7fe05', 600, 600)
-// REPLACE: Misty morning coffee cruise — ethereal, quiet beauty
+export const IG_POST_4 = '/gallery/portrait-3.jpeg'
+// Drift Upstate koozie + cocktail on boat table at sunset
 
-export const IG_POST_5 = u('photo-1544551763-46a013bb70d5', 600, 600)
-// REPLACE: Sunset from the boat — horizon on fire, guests silhouetted
+export const IG_POST_5 = '/favicon/favicon-1.png'
+// Drift Upstate cycle boat — golden hour, family, lake and mountains
 
 export const IG_POST_6 = u('photo-1533577116850-9cc66cad8a9b', 600, 600)
 // REPLACE: Bachelorette party celebrating on the water
@@ -313,5 +312,5 @@ export const VIDEO_BEHIND_SCENES_ID = 'dQw4w9WgXcQ'
 export const LAKE_MORNING = u('photo-1470071459604-3b5ec3a7fe05', 1400, 800)
 // REPLACE: Early morning on Fourth Lake — mist on the water, calm, quiet, golden dawn light
 
-export const LAKE_SUNSET = u('photo-1472213984618-c79aaec7fef0', 1400, 800)
-// REPLACE: The same view at golden hour — blazing sunset, warm light, dramatic sky
+export const LAKE_SUNSET = '/favicon/favicon-1.png'
+// Drift Upstate cycle boat at golden hour — Fourth Lake, Adirondack peaks, family on board
