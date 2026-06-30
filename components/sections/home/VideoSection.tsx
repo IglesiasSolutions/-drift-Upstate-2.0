@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Play, X } from 'lucide-react'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
 
-import { VIDEO_THUMBNAIL, VIDEO_HIGHLIGHT_REEL_ID } from '@/lib/media'
+import { VIDEO_THUMBNAIL, VIDEO_HIGHLIGHT_REEL_SRC } from '@/lib/media'
 
 export function VideoSection() {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -68,7 +68,7 @@ export function VideoSection() {
             {/* Headline over thumbnail */}
             <div className="absolute inset-x-0 top-1/3 -translate-y-1/2 text-center">
               <p className="font-playfair text-white text-xl md:text-2xl italic mb-8 opacity-70">
-                90 seconds that will convince you to book right now.
+                30 seconds that will convince you to book right now.
               </p>
             </div>
 
@@ -85,7 +85,7 @@ export function VideoSection() {
 
             {/* Duration badge */}
             <div className="absolute bottom-4 right-4 bg-black/60 text-white font-montserrat text-xs tracking-wide px-2.5 py-1 rounded">
-              1:30
+              0:30
             </div>
           </div>
         </ScrollReveal>
@@ -110,12 +110,14 @@ export function VideoSection() {
               className="relative w-full max-w-5xl aspect-video"
               onClick={(e) => e.stopPropagation()}
             >
-              <iframe
-                src={`https://www.youtube.com/embed/${VIDEO_HIGHLIGHT_REEL_ID}?autoplay=1&rel=0&modestbranding=1`}
-                title="Drift Upstate — Adirondack Cycle Boat Tour Highlight Reel"
-                allow="autoplay; fullscreen"
-                allowFullScreen
-                className="w-full h-full rounded-sm"
+              {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+              <video
+                src={VIDEO_HIGHLIGHT_REEL_SRC}
+                title="Drift Upstate — Adirondack Cycle Boat Tour"
+                autoPlay
+                controls
+                playsInline
+                className="w-full h-full rounded-sm bg-black"
               />
               <button
                 onClick={() => setIsPlaying(false)}

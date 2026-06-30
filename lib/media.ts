@@ -290,8 +290,7 @@ export const IG_POST_9 = '/gallery/kids-little-helpers.png'
 // VIDEOS
 // ────────────────────────────────────────────────────────────────────────────
 
-export const VIDEO_HIGHLIGHT_REEL_ID = 'dQw4w9WgXcQ'
-// REPLACE: Your YouTube video ID for the 90-second cinematic highlight reel
+export const VIDEO_HIGHLIGHT_REEL_SRC = '/videos/drift-upstate-ad.m4v'
 
 export const VIDEO_THUMBNAIL = '/gallery/boat-lake-wide-sunset.png'
 // Wide golden hour shot — full cycle boat on lake, birds, dock, sunset
