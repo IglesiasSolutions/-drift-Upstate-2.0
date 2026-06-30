@@ -51,6 +51,7 @@ export const siteConfig = {
   ],
 
   nav: [
+    { href: '/', label: 'Home' },
     { href: '/tours', label: 'Our Tours' },
     { href: '/about', label: 'About' },
     { href: '/crew', label: 'Meet the Crew' },
