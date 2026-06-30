@@ -36,7 +36,7 @@ export default function CrewPage() {
         imageAlt="The Larrea family on the Drift Upstate boat at golden hour"
         height="md"
         overlay="heavy"
-        imagePosition="top"
+        imagePosition="50% 60%"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Our Team' },
