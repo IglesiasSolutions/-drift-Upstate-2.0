@@ -49,7 +49,7 @@ export function TourDetailSection({ tour, index }: TourDetailSectionProps) {
                 </motion.div>
 
                 {/* Floating price badge */}
-                <div className="absolute -bottom-5 -right-5 bg-drift-navy text-white p-5 shadow-lift">
+                <div className="hidden sm:block absolute -bottom-5 -right-5 bg-drift-navy text-white p-5 shadow-lift">
                   <p className="font-playfair text-2xl font-bold text-drift-gold">
                     {tour.priceFrom}
                   </p>
@@ -60,9 +60,9 @@ export function TourDetailSection({ tour, index }: TourDetailSectionProps) {
 
                 {/* Gold accent */}
                 {isEven ? (
-                  <div className="absolute -top-5 -left-5 w-20 h-20 border-t-4 border-l-4 border-drift-gold" />
+                  <div className="hidden sm:block absolute -top-5 -left-5 w-20 h-20 border-t-4 border-l-4 border-drift-gold" />
                 ) : (
-                  <div className="absolute -top-5 -right-5 w-20 h-20 border-t-4 border-r-4 border-drift-gold" />
+                  <div className="hidden sm:block absolute -top-5 -right-5 w-20 h-20 border-t-4 border-r-4 border-drift-gold" />
                 )}
               </div>
             </div>

@@ -111,7 +111,7 @@ export function PageHero({
         )}
 
         {/* Title */}
-        <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight text-balance">
+        <h1 className="font-playfair text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white leading-tight text-balance">
           {title}
         </h1>
 

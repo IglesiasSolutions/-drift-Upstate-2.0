@@ -134,7 +134,7 @@ export function Hero() {
         {/* H1 — layered entrance */}
         <motion.h1
           {...fadeUp(0.28)}
-          className="font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.05] mb-6 text-balance"
+          className="font-playfair text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white leading-[1.05] mb-6 text-balance"
         >
           The First Cycle Boat Tour
           <br />

@@ -22,7 +22,7 @@ const trustItems = [
 
 export default function BookPage() {
   return (
-    <div className="min-h-screen bg-drift-mist pt-40 pb-24">
+    <div className="min-h-screen bg-drift-mist pt-28 md:pt-40 pb-16 md:pb-24">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">

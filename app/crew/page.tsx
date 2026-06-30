@@ -161,7 +161,7 @@ export default function CrewPage() {
           <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
             {certifications.map((cert) => (
               <StaggerItem key={cert.label}>
-                <div className="flex flex-col items-center text-center bg-drift-mist border border-drift-navy/10 p-8 hover:border-drift-gold/40 transition-colors duration-300">
+                <div className="flex flex-col items-center text-center bg-drift-mist border border-drift-navy/10 p-5 sm:p-8 hover:border-drift-gold/40 transition-colors duration-300">
                   <div className="text-4xl mb-4">{cert.icon}</div>
                   <Anchor className="w-6 h-6 text-drift-gold mb-3" strokeWidth={1.5} />
                   <p className="font-inter text-sm text-drift-navy/70 leading-relaxed">{cert.label}</p>

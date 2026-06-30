@@ -40,7 +40,7 @@ export function ExperienceIntro() {
               </div>
 
               {/* Stats micro-row */}
-              <div className="flex items-center gap-8 mt-10 mb-10">
+              <div className="flex flex-wrap items-center gap-6 mt-10 mb-10">
                 {[
                   { value: '90', unit: 'MIN', label: 'Tours' },
                   { value: '#1', unit: '', label: 'Cycle Boat in ADK' },
@@ -81,7 +81,7 @@ export function ExperienceIntro() {
               </div>
 
               {/* Floating badge card */}
-              <div className="absolute -bottom-6 -left-6 bg-white shadow-lift p-5 max-w-[200px]">
+              <div className="hidden sm:block absolute -bottom-6 -left-6 bg-white shadow-lift p-5 max-w-[200px]">
                 <p className="font-playfair text-2xl font-bold text-drift-navy">
                   First&nbsp;in the&nbsp;ADKs
                 </p>
@@ -91,7 +91,7 @@ export function ExperienceIntro() {
               </div>
 
               {/* Gold accent line */}
-              <div className="absolute -top-6 -right-6 w-24 h-24 border-t-4 border-r-4 border-drift-gold" />
+              <div className="hidden sm:block absolute -top-6 -right-6 w-24 h-24 border-t-4 border-r-4 border-drift-gold" />
             </div>
           </ScrollReveal>
         </div>

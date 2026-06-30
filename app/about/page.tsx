@@ -52,8 +52,8 @@ export default function AboutPage() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
-                <div className="absolute -top-5 -left-5 w-20 h-20 border-t-4 border-l-4 border-drift-gold" />
-                <div className="absolute -bottom-5 -right-5 bg-drift-navy text-white p-6 max-w-[200px]">
+                <div className="hidden sm:block absolute -top-5 -left-5 w-20 h-20 border-t-4 border-l-4 border-drift-gold" />
+                <div className="hidden sm:block absolute -bottom-5 -right-5 bg-drift-navy text-white p-6 max-w-[200px]">
                   <p className="font-playfair text-3xl font-bold text-drift-gold">500+</p>
                   <p className="font-montserrat text-xs tracking-widest uppercase text-white/60 mt-1">
                     Guests and Counting
@@ -71,7 +71,7 @@ export default function AboutPage() {
                     About Drift Upstate
                   </span>
                 </div>
-                <h2 className="font-playfair text-4xl md:text-5xl text-drift-navy leading-tight mb-6">
+                <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl text-drift-navy leading-tight mb-6">
                   Welcome to Drift Upstate Boat Tours
                 </h2>
                 <div className="space-y-5 text-drift-navy/70 text-lg leading-relaxed mb-8">
