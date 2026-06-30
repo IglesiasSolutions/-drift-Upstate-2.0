@@ -41,8 +41,8 @@ export const HOME_HERO_VIDEO_POSTER = HOME_HERO_BACKGROUND
 // TOURS OVERVIEW PAGE
 // ────────────────────────────────────────────────────────────────────────────
 
-export const TOURS_HERO = '/gallery/boat-sunset-crowd.jpeg'
-// Drift Upstate tiki cycle boat with crowd, blazing golden sunset
+export const TOURS_HERO = '/gallery/family-sunset-boat.png'
+// Family on the boat at golden sunset — tours page hero
 
 export const TOURS_COMPARISON_BG = '/gallery/boat-lake-wide-sunset.png'
 // Wide golden hour establishing shot — full cycle boat on Fourth Lake
