@@ -31,36 +31,36 @@ export const metadata: Metadata = {
 
 const timeline = [
   {
-    year: '2021',
-    title: 'The Idea',
+    year: '01',
+    title: 'Pedal-Powered Stations',
     description:
-      'A founder spots a cycle boat on a trip to the Finger Lakes and has a single thought: "Eagle Bay needs this." Fourth Lake is one of the most beautiful bodies of water in New York. People needed a new way to see it.',
+      'Fun, interactive pedal stations keep the energy going on the water. Pedaling is always optional — cruise as hard or as easy as you like.',
     image: ABOUT_TIMELINE_1,
-    imageAlt: 'Planning stage — maps and sketches for Drift Upstate',
+    imageAlt: 'Guests pedaling on the Drift Upstate cycle boat',
   },
   {
-    year: '2022',
-    title: 'The Boat Arrives',
+    year: '02',
+    title: 'Center Bar Setup',
     description:
-      'After months of permits, planning, and preparation — the Drift Upstate cycle boat arrives at the Eagle Bay dock for the first time. The lake was waiting.',
+      'Everyone stays connected around the center bar. Bring your drinks, set up your snacks in the built-in cooler, and let the good times flow.',
     image: ABOUT_TIMELINE_2,
-    imageAlt: 'The Drift Upstate boat arriving at Eagle Bay dock for the first time',
+    imageAlt: 'Center bar setup on the Drift Upstate cycle boat',
   },
   {
-    year: '2023',
-    title: 'Opening Day',
+    year: '03',
+    title: 'Relaxed Bench Seating',
     description:
-      'Tour #1 sells out in 48 hours. By the end of the first season, we had welcomed hundreds of guests from across New York and beyond — all discovering Fourth Lake for the first time on our boat.',
+      'Bench seating up front for a more relaxed vibe. Prefer to just chill and dance? No problem — this is your space.',
     image: ABOUT_TIMELINE_3,
-    imageAlt: 'Drift Upstate opening day with first guests on Fourth Lake',
+    imageAlt: 'Guests relaxing on bench seating at the front of the Drift Upstate boat',
   },
   {
-    year: '2024+',
-    title: 'Growing Every Season',
+    year: '04',
+    title: 'Motor-Assisted Cruising',
     description:
-      'Repeat guests. New faces every weekend. Word of mouth spreading across the Northeast. We are still the only cycle boat experience in the Adirondacks — and we intend to keep raising the bar.',
+      'All boats are equipped with a motor, so you can cruise effortlessly while enjoying the music and the views of the Fulton Chain of Lakes.',
     image: ABOUT_TIMELINE_4,
-    imageAlt: 'Drift Upstate busy season with fully booked tours on Fourth Lake',
+    imageAlt: 'Drift Upstate cycle boat cruising on Fourth Lake in the Adirondacks',
   },
 ]
 
@@ -101,11 +101,11 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="Our Story"
-        title="Born on the Lake. Built for the Adirondacks."
-        subtitle="The first and only cycle boat tour experience in the Adirondack Mountains."
+        eyebrow="Eagle Bay, NY"
+        title="Pedal. Party. Drift."
+        subtitle="The first cycle boat experience in the Adirondacks — located in beautiful Eagle Bay Village, New York."
         image={ABOUT_HERO}
-        imageAlt="Aerial view of Drift Upstate cycle boat on Fourth Lake"
+        imageAlt="Drift Upstate cycle boat on Fourth Lake at golden hour"
         height="md"
         overlay="heavy"
         breadcrumbs={[
@@ -146,26 +146,28 @@ export default function AboutPage() {
                 <div className="flex items-center gap-3 mb-5">
                   <span className="block h-px w-8 bg-drift-gold" />
                   <span className="font-montserrat text-xs tracking-widest uppercase text-drift-gold">
-                    Our Origin
+                    About Drift Upstate
                   </span>
                 </div>
                 <h2 className="font-playfair text-4xl md:text-5xl text-drift-navy leading-tight mb-6">
-                  Why Drift Upstate Exists
+                  Welcome to Drift Upstate Boat Tours
                 </h2>
                 <div className="space-y-5 text-drift-navy/70 text-lg leading-relaxed mb-8">
                   <p>
-                    Eagle Bay, New York sits at the heart of one of the most spectacular lake systems
-                    in the Adirondacks. Fourth Lake stretches out with a clarity that makes you stop
-                    mid-sentence, framed by peaks that turn gold at sunrise and purple at dusk.
+                    We are the first cycle boat experience in the Adirondacks! We bring together
+                    everything you want on the water: music, movement, relaxation, and unforgettable
+                    moments with your crew.
                   </p>
                   <p>
-                    We looked at this and thought: people should be out there. Not just passing through
-                    it or looking at it from shore — but on the water, in the middle of it, with people
-                    they love, making the kind of memories that define a summer.
+                    Step aboard our cycle boat (pedaling optional) and enjoy a public or private tour.
+                    Whether you&apos;re celebrating a birthday, family reunion, bachelor/bachelorette party,
+                    or just want to get out on the water — this is your space to vibe, laugh, and
+                    create memories.
                   </p>
                   <p>
-                    Drift Upstate was built to make that happen. We became the first cycle boat tour in
-                    the Adirondacks, and we haven't looked back.
+                    Set in the heart of the Adirondacks, your ride takes you through the most peaceful
+                    and scenic waters of the Fulton Chain of Lakes. This isn&apos;t just a boat ride —
+                    it&apos;s a whole atmosphere.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3">
@@ -186,9 +188,9 @@ export default function AboutPage() {
       <section className="section-padding bg-drift-mist">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader
-            eyebrow="The Journey"
-            title="How We Got Here"
-            subtitle="From a wild idea to the Adirondacks' most talked-about lake experience."
+            eyebrow="How It Works"
+            title="Everything You Need On the Water"
+            subtitle="Our signature cycle boat is built for the experience — here's what's included on every tour."
             align="center"
             className="mb-20"
           />
@@ -245,22 +247,19 @@ export default function AboutPage() {
                   </span>
                 </div>
                 <h2 className="font-playfair text-4xl md:text-5xl text-drift-navy leading-tight mb-6">
-                  Meet the Boat
+                  The Location
                 </h2>
                 <div className="space-y-4 text-drift-navy/70 leading-relaxed mb-8">
                   <p>
-                    Our custom cycle boat seats up to 14 guests and is purpose-built for the calm,
-                    clear waters of Fourth Lake. It&apos;s stable, safe, and genuinely beautiful on the
-                    water.
+                    Set in the heart of the Adirondacks, your ride takes you through the most peaceful
+                    and scenic waters of the Fulton Chain of Lakes.
                   </p>
                   <p>
-                    Guests pedal at their own pace while the captain handles navigation and safety.
-                    There&apos;s a built-in Bluetooth sound system, shade canopy, and cooler space.
-                    BYOB is not just allowed — it&apos;s encouraged (cans and soft-sided coolers, please).
+                    All boats are equipped with a motor, so you can cruise effortlessly while enjoying
+                    the music and the views. Pedaling is always optional — this is your time to relax.
                   </p>
                   <p>
-                    The boat departs from our dock in Eagle Bay and covers some of the most
-                    breathtaking stretches of Fourth Lake during each tour.
+                    This isn&apos;t just a boat ride. It&apos;s a whole atmosphere.
                   </p>
                 </div>
                 <div className="grid grid-cols-3 gap-6">
@@ -298,7 +297,7 @@ export default function AboutPage() {
       <section className="section-padding bg-drift-navy">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader
-            eyebrow="What We Believe"
+            eyebrow="What We Stand For"
             title="Our Values"
             subtitle="The principles that guide every tour, every crew member, every decision."
             align="center"
@@ -320,8 +319,8 @@ export default function AboutPage() {
       </section>
 
       <PreFooterCTA
-        headline="Come See What the Fuss Is About."
-        subheadline="Over 500 guests can't be wrong. Book a tour and experience Fourth Lake the way it was meant to be seen."
+        headline="This Isn't Just a Boat Ride."
+        subheadline="It's a whole atmosphere. Book your spot and experience the Fulton Chain of Lakes the way it was meant to be seen."
         primaryCTA="Book a Tour →"
         secondaryCTA="Meet the Crew"
         secondaryHref="/crew"

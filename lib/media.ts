@@ -187,8 +187,8 @@ export const TOUR_FAMILY_CARD = '/gallery/kids-little-helpers.png'
 export const ABOUT_HERO = '/gallery/boat-lake-wide-sunset.png'
 // Wide establishing shot — full cycle boat on lake, birds, dock, golden sunset
 
-export const ABOUT_STORY_IMAGE = u('photo-1506905925346-21bda4d32df4', 900, 1125)
-// REPLACE: Founders/owners on the dock — casual, authentic, Eagle Bay marina in background
+export const ABOUT_STORY_IMAGE = '/gallery/New Boat Main Flyer Image-topaz-face-upscale-2.8x-face.jpeg'
+// New boat main flyer image — upscaled, face-enhanced
 
 export const ABOUT_TIMELINE_1 = u('photo-1488188840666-e2308741a62f', 600, 400)
 // REPLACE: Early planning stage — map/sketches on table, early 2021 feel
