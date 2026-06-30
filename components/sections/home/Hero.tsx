@@ -123,7 +123,7 @@ export function Hero() {
         {/* Season badge */}
         <motion.div
           {...fadeUp(0.1)}
-          className="inline-flex items-center gap-2 bg-drift-gold/15 border border-drift-gold/30 backdrop-blur-sm px-4 py-1.5 mb-8"
+          className="hidden sm:inline-flex items-center gap-2 bg-drift-gold/15 border border-drift-gold/30 backdrop-blur-sm px-4 py-1.5 mb-8"
         >
           <span className="w-1.5 h-1.5 bg-drift-gold rounded-full animate-pulse" />
           <span className="font-montserrat text-xs tracking-widest uppercase text-drift-gold">
