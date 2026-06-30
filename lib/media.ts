@@ -82,8 +82,8 @@ export const TOUR_PRIVATE_DETAIL_2 = '/gallery/proposal-portrait.png'
 export const TOUR_PRIVATE_DETAIL_3 = u('photo-1472213984618-c79aaec7fef0', 800, 600)
 // REPLACE: Corporate team on private boat, professional but relaxed, lake in background
 
-export const TOUR_PRIVATE_CARD = '/gallery/proposal-landscape.png'
-// Proposal landscape — romantic, aspirational, golden hour
+export const TOUR_PRIVATE_CARD = '/gallery/grandparents-toast-sunset.webp'
+// Two older couples toasting under string lights at sunset — warm, multigenerational private charter moment
 
 // ────────────────────────────────────────────────────────────────────────────
 // COFFEE CRUISE — Morning on the Lake
