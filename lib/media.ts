@@ -41,8 +41,8 @@ export const HOME_HERO_VIDEO_POSTER = HOME_HERO_BACKGROUND
 // TOURS OVERVIEW PAGE
 // ────────────────────────────────────────────────────────────────────────────
 
-export const TOURS_HERO = '/gallery/boat-sunset-crowd.jpeg'
-// Drift Upstate tiki cycle boat with crowd, blazing golden sunset
+export const TOURS_HERO = '/gallery/family-sunset-boat.png'
+// Family on the boat at golden sunset — tours page hero
 
 export const TOURS_COMPARISON_BG = '/gallery/boat-lake-wide-sunset.png'
 // Wide golden hour establishing shot — full cycle boat on Fourth Lake
@@ -209,8 +209,8 @@ export const ABOUT_BOAT_PHOTO = '/gallery/boat-sunset-crowd.jpeg'
 // CREW PAGE
 // ────────────────────────────────────────────────────────────────────────────
 
-export const CREW_HERO = '/gallery/family-sunset-boat.png'
-// Larrea family on the boat at golden sunset — wide landscape hero
+export const CREW_HERO = '/gallery/larrea-family.png'
+// The Larrea family together on the boat at golden sunset — wide landscape hero
 
 export const CREW_CAPTAIN_1 = '/crew/portrait-6.jpeg'
 // Nate Lareya — Captain & Co-Owner

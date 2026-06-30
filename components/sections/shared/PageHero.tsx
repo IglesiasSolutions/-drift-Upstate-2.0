@@ -16,6 +16,7 @@ interface PageHeroProps {
   imageAlt: string
   height?: 'sm' | 'md' | 'lg'
   overlay?: 'light' | 'medium' | 'heavy'
+  imagePosition?: string
   breadcrumbs?: Breadcrumb[]
   className?: string
   children?: React.ReactNode
@@ -29,6 +30,7 @@ export function PageHero({
   imageAlt,
   height = 'md',
   overlay = 'medium',
+  imagePosition = 'center',
   breadcrumbs,
   className,
   children,
@@ -61,7 +63,8 @@ export function PageHero({
           fill
           priority
           quality={90}
-          className="object-cover object-center"
+          className="object-cover"
+          style={{ objectPosition: imagePosition }}
           sizes="100vw"
         />
       </div>
