@@ -63,7 +63,7 @@ export function FinalCTA() {
 
           {/* Micro trust */}
           <p className="font-montserrat text-xs tracking-widest uppercase text-white/45">
-            ✓ Easy online booking &nbsp;·&nbsp; ✓ Instant confirmation &nbsp;·&nbsp; ✓ Free cancellation policy
+            ✓ Easy online booking &nbsp;·&nbsp; ✓ Instant confirmation &nbsp;·&nbsp; ✓ Free cancellation (48+ hrs)
           </p>
         </ScrollReveal>
       </div>

@@ -171,7 +171,7 @@ export function Hero() {
           {...fadeUp(0.70)}
           className="font-montserrat text-xs tracking-widest uppercase text-white/45 mb-8"
         >
-          ✓ Easy booking &nbsp;&nbsp;·&nbsp;&nbsp; ✓ Instant confirmation &nbsp;&nbsp;·&nbsp;&nbsp; ✓ Free cancellation
+          ✓ Easy booking &nbsp;&nbsp;·&nbsp;&nbsp; ✓ Instant confirmation &nbsp;&nbsp;·&nbsp;&nbsp; ✓ Free cancellation (48+ hrs)
         </motion.p>
 
         {/* Live sunset countdown */}

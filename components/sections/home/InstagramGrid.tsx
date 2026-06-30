@@ -186,7 +186,7 @@ export function InstagramGrid() {
                     href={siteConfig.social.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="ml-auto font-montserrat text-xs text-blue-500 hover:text-blue-700 tracking-wide"
+                    className="ml-auto font-montserrat text-xs text-drift-gold hover:text-drift-gold-dark tracking-wide"
                   >
                     Follow
                   </Link>

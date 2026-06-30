@@ -21,8 +21,8 @@ export const siteConfig = {
   },
 
   contact: {
-    phone: '(555) 867-5309',
-    phoneHref: 'tel:+15558675309',
+    phone: '(315) 516-8687',
+    phoneHref: 'tel:+13155168687',
     email: 'hello@driftupstate.com',
     emailHref: 'mailto:hello@driftupstate.com',
   },

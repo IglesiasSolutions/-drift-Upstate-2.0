@@ -1,7 +1,7 @@
 import { Anchor, Star, Users, Calendar, Mountain } from 'lucide-react'
 
 const items = [
-  { icon: Star,     text: '5-Star Rated on Google' },
+  { icon: Star,     text: '4.9-Star Rated on Google' },
   { icon: Anchor,   text: 'First Cycle Boat in the Adirondacks' },
   { icon: Users,    text: 'Family Owned & Operated' },
   { icon: Calendar, text: 'Available 7 Days a Week' },
