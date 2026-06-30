@@ -20,7 +20,7 @@ export default function ScrollProgress() {
         right: 0,
         zIndex: 200,
         height: '2px',
-        backgroundColor: '#C9A84C',
+        backgroundColor: '#E3AC32',
         transformOrigin: 'left',
         scaleX,
       }}

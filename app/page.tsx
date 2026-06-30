@@ -37,13 +37,13 @@ export default function HomePage() {
       <LakeShowcase />
 
       {/* Wave: drift-mist → drift-navy */}
-      <WaveDivider fromColor="#E8EFF5" toColor="#0D1B2A" />
+      <WaveDivider fromColor="#F5EDE0" toColor="#162C1D" />
 
       {/* 5. Experience cards — all 7 tour types with 3D tilt, navy background */}
       <ExperienceCards />
 
       {/* Wave: drift-navy → white */}
-      <WaveDivider fromColor="#0D1B2A" toColor="#ffffff" />
+      <WaveDivider fromColor="#162C1D" toColor="#ffffff" />
 
       {/* 6. Stats — GSAP animated numbers on scroll */}
       <Stats />
@@ -64,7 +64,7 @@ export default function HomePage() {
       <VideoSection />
 
       {/* Wave: drift-navy → white (after video section) */}
-      <WaveDivider fromColor="#0D1B2A" toColor="#ffffff" />
+      <WaveDivider fromColor="#162C1D" toColor="#ffffff" />
 
       {/* 12. Location — Google Maps + weather widget + contact info */}
       <LocationSection />

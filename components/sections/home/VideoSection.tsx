@@ -21,7 +21,7 @@ export function VideoSection() {
         className="absolute inset-0 opacity-5 pointer-events-none"
         style={{
           backgroundImage:
-            'radial-gradient(circle, rgba(201,168,76,0.6) 1px, transparent 1px)',
+            'radial-gradient(circle, rgba(227,172,50,0.6) 1px, transparent 1px)',
           backgroundSize: '28px 28px',
         }}
       />
