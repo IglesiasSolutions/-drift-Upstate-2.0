@@ -101,8 +101,8 @@ export const TOUR_COFFEE_DETAIL_2 = u('photo-1506905925346-21bda4d32df4', 800, 6
 export const TOUR_COFFEE_DETAIL_3 = u('photo-1488188840666-e2308741a62f', 800, 600)
 // REPLACE: Small intimate group of 4-6 people, morning glow, relaxed smiles, thermos/coffee
 
-export const TOUR_COFFEE_CARD = '/gallery/coffee-cruise-morning.png'
-// Drift Upstate boat full of guests, bright blue sky, sun low over Adirondack peaks — morning light
+export const TOUR_COFFEE_CARD = '/gallery/coffee-mug-cap-sunrise.png'
+// Drift Upstate mug + cap on the dock railing, misty sunrise over Fourth Lake
 
 // ────────────────────────────────────────────────────────────────────────────
 // LADIES NIGHT / BACHELORETTE
@@ -139,8 +139,8 @@ export const TOUR_CORPORATE_DETAIL_2 = u('photo-1560250097-0b93528c311a', 800, 6
 export const TOUR_CORPORATE_DETAIL_3 = u('photo-1507003211169-0a1dd7228f2d', 800, 600)
 // REPLACE: Group photo on dock before boarding — professional group, Adirondack setting
 
-export const TOUR_CORPORATE_CARD = u('photo-1522202176988-66273c2fd55f', 800, 600)
-// REPLACE: Team energy on the water — corporate but fun, aspirational
+export const TOUR_CORPORATE_CARD = '/gallery/corporate-team-boat.png'
+// Team in matching Drift Upstate branded shirts on the boat — bright midday, Fourth Lake
 
 // ────────────────────────────────────────────────────────────────────────────
 // WEDDING CHARTER
