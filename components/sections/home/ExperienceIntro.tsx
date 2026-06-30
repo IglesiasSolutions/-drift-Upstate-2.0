@@ -44,7 +44,7 @@ export function ExperienceIntro() {
                 {[
                   { value: '90', unit: 'MIN', label: 'Tours' },
                   { value: '#1', unit: '', label: 'Cycle Boat in ADK' },
-                  { value: '5★', unit: '', label: 'Google Rating' },
+                  { value: '4.9★', unit: '', label: 'Google Rating' },
                 ].map((stat) => (
                   <div key={stat.label} className="flex flex-col">
                     <span className="font-playfair text-3xl font-bold text-drift-navy">
