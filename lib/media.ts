@@ -309,8 +309,8 @@ export const VIDEO_BEHIND_SCENES_ID = 'dQw4w9WgXcQ'
 // BEFORE / AFTER SLIDER
 // ────────────────────────────────────────────────────────────────────────────
 
-export const LAKE_MORNING = '/gallery/lake-morning-cruise.webp'
+export const LAKE_MORNING = '/gallery/lake-morning-cruise.png'
 // Drift Upstate boat full of guests, bright blue sky, sun low over Adirondack peaks
 
-export const LAKE_SUNSET = '/gallery/lake-sunset-charter.webp'
+export const LAKE_SUNSET = '/gallery/lake-sunset-charter.png'
 // Drift Upstate boat full of guests, fiery orange/gold sunset sky over the lake
