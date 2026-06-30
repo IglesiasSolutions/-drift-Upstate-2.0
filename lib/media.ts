@@ -41,7 +41,7 @@ export const HOME_HERO_VIDEO_POSTER = HOME_HERO_BACKGROUND
 // TOURS OVERVIEW PAGE
 // ────────────────────────────────────────────────────────────────────────────
 
-export const TOURS_HERO = '/gallery/family-sunset-boat.png'
+export const TOURS_HERO = '/gallery/boat-sunset-crowd.jpeg'
 // Family on the boat at golden sunset — tours page hero
 
 export const TOURS_COMPARISON_BG = '/gallery/boat-lake-wide-sunset.png'
@@ -51,7 +51,7 @@ export const TOURS_COMPARISON_BG = '/gallery/boat-lake-wide-sunset.png'
 // PUBLIC TOUR — The Classic Drift
 // ────────────────────────────────────────────────────────────────────────────
 
-export const TOUR_PUBLIC_HERO = '/gallery/friends-group-toast.png'
+export const TOUR_PUBLIC_HERO = '/gallery/boat-sunset-crowd.jpeg'
 // Six diverse young adults toasting drinks, lake and sunset backdrop
 
 export const TOUR_PUBLIC_DETAIL_1 = '/gallery/couples-sunset-toast.png'
@@ -70,7 +70,7 @@ export const TOUR_PUBLIC_CARD = '/gallery/boat-sunset-crowd.jpeg'
 // PRIVATE CHARTER — Your Boat. Your Moment.
 // ────────────────────────────────────────────────────────────────────────────
 
-export const TOUR_PRIVATE_HERO = '/gallery/proposal-landscape.png'
+export const TOUR_PRIVATE_HERO = '/gallery/grandparents-toast-sunset.webp'
 // Proposal on boat — "She said YES!" sign, candles, flowers, audience, landscape
 
 export const TOUR_PRIVATE_DETAIL_1 = '/gallery/friends-group-toast.png'
@@ -89,7 +89,7 @@ export const TOUR_PRIVATE_CARD = '/gallery/grandparents-toast-sunset.webp'
 // COFFEE CRUISE — Morning on the Lake
 // ────────────────────────────────────────────────────────────────────────────
 
-export const TOUR_COFFEE_HERO = u('photo-1470071459604-3b5ec3a7fe05', 1920, 900)
+export const TOUR_COFFEE_HERO = '/gallery/coffee-mug-cap-sunrise.png'
 // REPLACE: Still morning — mist on Fourth Lake, couple with coffee mugs, peaceful and quiet
 
 export const TOUR_COFFEE_DETAIL_1 = u('photo-1470071459604-3b5ec3a7fe05', 800, 600)
@@ -127,7 +127,7 @@ export const TOUR_LADIES_CARD = '/gallery/friends-group-toast.png'
 // CORPORATE EVENTS
 // ────────────────────────────────────────────────────────────────────────────
 
-export const TOUR_CORPORATE_HERO = u('photo-1522202176988-66273c2fd55f', 1920, 900)
+export const TOUR_CORPORATE_HERO = '/gallery/corporate-team-boat.png'
 // REPLACE: Professional team on private charter — relaxed smiles, lake backdrop, team bonding energy
 
 export const TOUR_CORPORATE_DETAIL_1 = u('photo-1522202176988-66273c2fd55f', 800, 600)
@@ -146,7 +146,7 @@ export const TOUR_CORPORATE_CARD = '/gallery/corporate-team-boat.png'
 // WEDDING CHARTER
 // ────────────────────────────────────────────────────────────────────────────
 
-export const TOUR_WEDDING_HERO = '/gallery/proposal-portrait.png'
+export const TOUR_WEDDING_HERO = '/gallery/proposal-landscape.png'
 // Proposal portrait — romantic, candles and flowers, intimate moment on boat
 
 export const TOUR_WEDDING_DETAIL_1 = '/gallery/proposal-landscape.png'
@@ -165,7 +165,7 @@ export const TOUR_WEDDING_CARD = '/gallery/proposal-landscape.png'
 // FAMILY CRUISE
 // ────────────────────────────────────────────────────────────────────────────
 
-export const TOUR_FAMILY_HERO = '/gallery/family-sunset-boat.png'
+export const TOUR_FAMILY_HERO = '/gallery/kids-little-helpers.png'
 // Family with kids on boat from behind, orange sunset, landscape
 
 export const TOUR_FAMILY_DETAIL_1 = '/gallery/kids-little-helpers.png'
@@ -187,8 +187,8 @@ export const TOUR_FAMILY_CARD = '/gallery/kids-little-helpers.png'
 export const ABOUT_HERO = '/gallery/boat-lake-wide-sunset.png'
 // Wide establishing shot — full cycle boat on lake, birds, dock, golden sunset
 
-export const ABOUT_STORY_IMAGE = u('photo-1506905925346-21bda4d32df4', 900, 1125)
-// REPLACE: Founders/owners on the dock — casual, authentic, Eagle Bay marina in background
+export const ABOUT_STORY_IMAGE = '/gallery/New Boat Main Flyer Image-topaz-face-upscale-2.8x-face.jpeg'
+// New boat main flyer image — upscaled, face-enhanced
 
 export const ABOUT_TIMELINE_1 = u('photo-1488188840666-e2308741a62f', 600, 400)
 // REPLACE: Early planning stage — map/sketches on table, early 2021 feel
