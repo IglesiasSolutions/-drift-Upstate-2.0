@@ -101,8 +101,8 @@ export const TOUR_COFFEE_DETAIL_2 = u('photo-1506905925346-21bda4d32df4', 800, 6
 export const TOUR_COFFEE_DETAIL_3 = u('photo-1488188840666-e2308741a62f', 800, 600)
 // REPLACE: Small intimate group of 4-6 people, morning glow, relaxed smiles, thermos/coffee
 
-export const TOUR_COFFEE_CARD = u('photo-1470071459604-3b5ec3a7fe05', 800, 600)
-// REPLACE: Mist-on-the-lake morning shot — quiet, contemplative, perfect morning vibes
+export const TOUR_COFFEE_CARD = '/gallery/coffee-cruise-morning.png'
+// Drift Upstate boat full of guests, bright blue sky, sun low over Adirondack peaks — morning light
 
 // ────────────────────────────────────────────────────────────────────────────
 // LADIES NIGHT / BACHELORETTE
